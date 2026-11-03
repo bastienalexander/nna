@@ -12,7 +12,7 @@
   --op-hoofd: #FFFFFF;
   --op-steun1: #FFFFFF;
   --op-steun2: #FFFFFF;
-  /* Uit Figma */
+  /* Basiskleuren */
   --indigo: #6F66F7;
   --zand: #F6D089;
   --roze: #EE868D;
@@ -107,7 +107,16 @@ section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 .chip { font-family: var(--font-display) !important; font-weight: 500 !important; }
 .kopbalk nav a { color: var(--diep); text-decoration: none; }
 .kopbalk nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
-@media (max-width: 560px) { .kopbalk nav a.extra { display: none; } .kopbalk nav { gap: 16px; } }
+.menu-knop { display: none; font-family: var(--font-display); font-weight: 500; font-size: 0.98rem; color: var(--diep); background: var(--wit); border: 1.5px solid var(--diep); border-radius: 999px; padding: 7px 16px; cursor: pointer; align-items: center; gap: 8px; transition: background-color .18s ease, color .18s ease; }
+.menu-knop:hover, .menu-knop[aria-expanded="true"] { background: var(--diep); color: var(--wit); }
+.menu-knop svg { width: 16px; height: 16px; }
+@media (max-width: 640px) {
+  .menu-knop { display: inline-flex; }
+  .kopbalk nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--wit); border-bottom: 1px solid var(--rand); box-shadow: 0 16px 30px -20px rgba(0, 0, 0, .35); padding: 4px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); font-size: 1.15rem; }
+  .kopbalk.menu-open nav { display: flex; }
+  .kopbalk nav a { padding: 13px 0; border-bottom: 1px solid var(--rand); }
+  .kopbalk nav a:last-child { border-bottom: 0; }
+}
 .logo-laag { position: fixed; left: 0; top: 0; z-index: 45; }
 header { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 28px; }
 .hero-ruimte { height: min(clamp(300px, 62vh, 620px), 125vw); }
@@ -142,7 +151,7 @@ header { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; paddin
 @media (max-width: 900px) { .kern { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 460px) { .kern { grid-template-columns: 1fr; } }
 .kaart { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
-.staal { min-height: 170px; background: var(--c); color: var(--t); padding: 14px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: inset 0 -1px 0 var(--rand); }
+.staal { min-height: 130px; background: var(--c); color: var(--t); padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: inset 0 -1px 0 var(--rand); }
 .staal .bron { align-self: flex-start; font-family: var(--font-ui); font-size: 0.66rem; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; }
 .staal .aa { font-size: 2rem; font-weight: 700; line-height: 1; }
 .kaart-tekst { padding: 14px 16px 16px; display: grid; gap: 6px; align-content: start; }
@@ -213,7 +222,7 @@ td.num { font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric
 /* ---------- Voorbeeld ---------- */
 .voorbeeld { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rand); background: var(--wit); }
 .vb-pad { padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(40px, 6vw, 72px); }
-/* De doorlopende zandlijn links, zoals in het Figma-ontwerp */
+/* De doorlopende zandlijn links, zoals in het homepage-ontwerp */
 .vb-lijn { background: linear-gradient(var(--zand), var(--zand)) no-repeat clamp(14px, 2.4vw, 26px) 0 / 3px 100%, var(--wit); }
 .vb-hero { position: relative; display: grid; gap: clamp(28px, 5vw, 56px); padding-bottom: clamp(48px, 7vw, 88px); }
 .vb-kop { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -297,12 +306,13 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
 <span class="veilig-boven" id="veilig-boven" aria-hidden="true"></span>
 <div class="kopbalk" id="kopbalk">
   <div class="kopbalk-in">
-    <nav aria-label="Secties">
-      <a href="#h-logo" class="extra">Logo</a>
+    <button type="button" class="menu-knop" id="menu-knop" aria-expanded="false" aria-controls="menu-lijst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+    <nav aria-label="Secties" id="menu-lijst">
+      <a href="#h-logo">Logo</a>
       <a href="#h-kleuren">Kleuren</a>
       <a href="#h-varianten">Varianten</a>
-      <a href="#h-combi" class="extra">Leesbaarheid</a>
-      <a href="#h-code" class="extra">Code</a>
+      <a href="#h-combi">Leesbaarheid</a>
+      <a href="#h-code">Code</a>
     </nav>
   </div>
 </div>
@@ -319,7 +329,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
       </div>
       <div class="meta">
         <span class="scrolhint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>Scroll om het logo te zien krimpen</span>
-        <span class="label" style="color: var(--zacht)">4 kleuren uit Figma · 6 aanvullend</span>
+        <span class="label" style="color: var(--zacht)">4 kleuren · 6 aanvullend</span>
       </div>
     </div>
   </header>
@@ -385,7 +395,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
     <div class="section-head">
       <span class="label">Kleuren</span>
       <h2 id="h-kleuren">Indigo draagt, zand verbindt</h2>
-      <p>Indigo, zand, roze en teal komen uit het Figma-ontwerp. Indigo en wit maken de pagina. Zand gebruik je gedoseerd, voor de lijnen die alles verbinden. Klik op een code om hem te kopiëren.</p>
+      <p>Indigo, zand, roze en teal vormen de basis. Indigo en wit maken de pagina. Zand gebruik je gedoseerd, voor de lijnen die alles verbinden. Klik op een code om hem te kopiëren.</p>
     </div>
     <div class="kern" id="kern"></div>
     <div class="dosering">
@@ -406,7 +416,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
     <div class="section-head">
       <span class="label">Kleurvoorstellen</span>
       <h2 id="h-varianten">Andere kleurcombinaties</h2>
-      <p>De voorstellen uit <i>261103 nna kleur_v1</i>, pagina 4 tot en met 28: steeds de kleur van de woorden, de lijnen en twee steunkleuren. Kies een variant om hem op de hele pagina te bekijken. Het logo, de kleuren, de leesbaarheid, het voorbeeld en de code passen zich aan. Elke variant heeft een roepnaam; eronder staan de kleur van de woorden en de lijnen. Met de link in de adresbalk kun je een variant direct delen.</p>
+      <p>Vijfentwintig kleurvoorstellen, steeds met een kleur voor de woorden, een voor de lijnen en twee steunkleuren. Kies een variant om hem op de hele pagina te bekijken. Het logo, de kleuren, de leesbaarheid, het voorbeeld en de code passen zich aan. Elke variant heeft een roepnaam; eronder staan de kleur van de woorden en de lijnen. Met de link in de adresbalk kun je een variant direct delen.</p>
     </div>
     <div class="varianten-raster" id="varianten-raster"></div>
   </section>
@@ -438,7 +448,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
     <div class="section-head">
       <span class="label">In gebruik</span>
       <h2 id="h-voorbeeld">Zo ziet het eruit</h2>
-      <p>De opbouw van de homepage in Figma. Wit en indigo dragen de pagina, de zandlijn loopt erdoorheen, roze en teal krijgen elk één band en er is één licht zandvlak.</p>
+      <p>De opbouw van de homepage. Wit en indigo dragen de pagina, de zandlijn loopt erdoorheen, roze en teal krijgen elk één band en er is één licht zandvlak.</p>
     </div>
     <div class="voorbeeld">
       <div class="vb-pad vb-hero">
@@ -507,7 +517,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
     </div>
   </section>
 
-  <footer>Netwerk Nieuwkomers Amsterdam · huisstijl: logo en kleuren · concept, nog niet definitief · logo volgens het grid · kleurgebruik volgens NNA Homepage in Figma</footer>
+  <footer>Netwerk Nieuwkomers Amsterdam · huisstijl: logo en kleuren · concept, nog niet definitief</footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <div class="variant-pil" id="variant-pil" hidden>
@@ -733,9 +743,9 @@ const KLEURNAAM = {
 /* Roepnamen, zoals Adobe Color paletten noemt */
 const ROEPNAAM = {
   12: 'Welkom', 4: 'Klassiek', 5: 'Festival', 6: 'Zomerterras', 7: 'Zonnig', 8: 'Vondelpark', 9: 'Ochtendmist',
-  10: 'Bubblegum', 11: 'Fris', 13: 'Lente', 14: 'Winteravond', 15: 'Fluweel', 16: 'Gala', 17: 'Moestuin',
-  18: 'Bruin café', 19: 'Happy', 20: 'Limonade', 21: 'Picknick', 22: 'Avondmarkt', 23: 'Watermeloen',
-  24: 'Zeebries', 25: 'Zonsondergang', 26: 'Bloemenmarkt', 27: 'Schaatsen', 28: 'Stroopwafel',
+  10: 'Bubblegum', 11: 'Fris', 13: 'Lente', 14: 'Winteravond', 15: 'Fluweel', 16: 'Feest', 17: 'Moestuin',
+  18: 'Theetijd', 19: 'Happy', 20: 'Limonade', 21: 'Picknick', 22: 'Avondmarkt', 23: 'Watermeloen',
+  24: 'Zeebries', 25: 'Zonsondergang', 26: 'Bloemenmarkt', 27: 'Winterlicht', 28: 'Gastvrij',
 };
 const slugVan = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const VARIANTEN = [{"p":4,"woord":"#000000","lijn":"#465A9E","vlakken":["#000000","#465A9E","#8CD2F4","#FFFF00"]},{"p":5,"woord":"#7D39EB","lijn":"#DCF671","vlakken":["#7D39EB","#C6FF33","#8CD2F4","#FFFF00"]},{"p":6,"woord":"#FC4863","lijn":"#75E9D4","vlakken":["#FC4863","#75E9D4","#79ED82","#00A267"]},{"p":7,"woord":"#004AAB","lijn":"#FDDF59","vlakken":["#004AAB","#FDDF59","#7EDA55","#00A267"]},{"p":8,"woord":"#00A267","lijn":"#FDDF59","vlakken":["#7EDA55","#004AAB","#FDDF59","#00A267"]},{"p":9,"woord":"#83BEC6","lijn":"#87BD5D","vlakken":["#83BEC6","#87BD5D","#FDDF59","#00A267"]},{"p":10,"woord":"#416FF6","lijn":"#EE868D","vlakken":["#416FF6","#EE868D","#F8B236","#509990"]},{"p":11,"woord":"#416FF6","lijn":"#87BD5D","vlakken":["#416FF6","#87BD5D","#EE868D","#F6ADEA"]},{"p":12,"woord":"#6F66F7","lijn":"#F6D089","vlakken":["#6F66F7","#F6D089","#EE868D","#509990"]},{"p":13,"woord":"#2F9A92","lijn":"#8D85FF","vlakken":["#2F9A92","#8D85FF","#A9A3FF","#FDC40C"]},{"p":14,"woord":"#7D2133","lijn":"#B0D4D4","vlakken":["#7D2133","#B0D4D4","#1F0062","#2A6552"]},{"p":15,"woord":"#7D2133","lijn":"#F6ADEA","vlakken":["#7D2133","#F6ADEA","#1F0062","#2A6552"]},{"p":16,"woord":"#7D2133","lijn":"#FDC40C","vlakken":["#7D2133","#FDC40C","#1F0062","#2A6552"]},{"p":17,"woord":"#86194D","lijn":"#69AA7E","vlakken":["#86194D","#2A7954","#AD4D7B","#69AA7E"]},{"p":18,"woord":"#430716","lijn":"#CBD9FC","vlakken":["#430716","#CBD9FC","#FF5E7C","#87BD5D"]},{"p":19,"woord":"#5499E8","lijn":"#FF5E7C","vlakken":["#5499E8","#FF5E7C","#FBE812","#A8CE84"]},{"p":20,"woord":"#FF5E7C","lijn":"#FBE812","vlakken":["#FF5E7C","#FBE812","#5499E8","#A8CE84"]},{"p":21,"woord":"#22C46F","lijn":"#FDD540","vlakken":["#22C46F","#78AAFF","#FDD540","#FB6F7A"]},{"p":22,"woord":"#01156B","lijn":"#22C46F","vlakken":["#01156B","#22C46F","#FDD540","#FB6F7A"]},{"p":23,"woord":"#22C46F","lijn":"#FB6F7A","vlakken":["#22C46F","#FB6F7A","#FDD540","#002F01"]},{"p":24,"woord":"#4EACAB","lijn":"#BE7CF7","vlakken":["#4EACAB","#BE7CF7","#ED6E65","#F2A9BC"]},{"p":25,"woord":"#ED6E65","lijn":"#BE7CF7","vlakken":["#ED6E65","#BE7CF7","#4EACAB","#F2A9BC"]},{"p":26,"woord":"#7D2133","lijn":"#F6ADEA","vlakken":["#7D2133","#F6ADEA","#4EACAB","#F2A9BC"]},{"p":27,"woord":"#7D2133","lijn":"#B0D4D4","vlakken":["#7D2133","#B0D4D4","#4EACAB","#F2A9BC"]},{"p":28,"woord":"#7D2133","lijn":"#FDC40C","vlakken":["#7D2133","#FDC40C","#4EACAB","#FFF5D7"]}];
@@ -813,7 +823,7 @@ function tekenKleuren(v) {
   document.getElementById('kern').innerHTML = ['hoofd', 'lijn', 'steun1', 'steun2'].map(k => {
     const c = K(k), t = besteTekst(c.hex, P.inkt);
     return `<article class="kaart">
-      <div class="staal" style="--c:${c.hex};--t:${t.hex}"><span class="bron">${st ? 'Uit Figma' : v.naam}</span><span class="aa">Aa</span></div>
+      <div class="staal" style="--c:${c.hex};--t:${t.hex}"><span class="aa">Aa</span></div>
       <div class="kaart-tekst"><h3>${c.naam}</h3><p>${c.rol}</p>
         <div class="codes">${kopieKnop(c)}<span>RGB ${rgb(c.hex)}</span><span>${t.naam}-tekst ${fmt(t.r)}:1 ${niveau(t.r)}</span></div></div>
     </article>`;
@@ -835,7 +845,7 @@ function tekenKleuren(v) {
   }).join('');
   const regel = k => `  --nna-${slug[k]}: ${P[k]};`;
   document.getElementById('css-code').textContent = `:root {
-  /* ${v.naam} · ${v.kleuren.toLowerCase()}${st ? ' · uit Figma' : ' · pagina ' + v.p + ' uit 261103 nna kleur_v1'} */
+  /* ${v.naam} · ${v.kleuren.toLowerCase()} */
 ${['hoofd', 'lijn', 'steun1', 'steun2'].map(regel).join('\n')}
 
   /* Aanvullend */
@@ -871,7 +881,7 @@ raster.innerHTML = VARIANTEN.map(v => {
     <span class="vk-logo-vak"><span class="vk-logo nna-logo" style="--logo-tekst:${v.woord};--logo-lijn:${v.lijn}" aria-hidden="true"></span></span>
     <span class="vk-vlakken" aria-hidden="true">${vlakken}</span>
     <span class="vk-naam">${v.naam}${v.p === STANDAARD ? ' <em>huidige keuze</em>' : ''}</span>
-    <span class="vk-kleuren">${v.kleuren} · pagina ${v.p}</span>
+    <span class="vk-kleuren">${v.kleuren}</span>
     <span class="vk-codes">${[v.woord, v.lijn, P.steun1, P.steun2].join(' · ')}</span>
   </button>`;
 }).join('');
@@ -944,6 +954,19 @@ document.getElementById('kopieer-css').addEventListener('click', () => {
   const pre = document.getElementById('css-code');
   navigator.clipboard.writeText(pre.textContent).then(() => meld('CSS gekopieerd'), () => { selecteer(pre); meld('Selecteer en kopieer met ⌘C / Ctrl+C'); });
 });
+
+/* Menu: op de telefoon uitklapbaar; de link houdt de gekozen variant */
+const menuKnop = document.getElementById('menu-knop');
+function menu(open) { kopbalk.classList.toggle('menu-open', open); menuKnop.setAttribute('aria-expanded', String(open)); }
+menuKnop.addEventListener('click', () => menu(!kopbalk.classList.contains('menu-open')));
+document.getElementById('menu-lijst').addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]'); if (!a) return;
+  const doel = document.querySelector(a.getAttribute('href')); if (!doel) return;
+  e.preventDefault(); menu(false);
+  doel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') menu(false); });
+window.addEventListener('scroll', () => { if (window.scrollY < 40) menu(false); }, { passive: true });
 
 tekenDemo(); tekenVarianten(); tekenOpening();
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { tekenDemo(); tekenVarianten(); tekenOpening(); });
