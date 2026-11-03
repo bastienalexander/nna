@@ -110,7 +110,7 @@ section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 .menu-knop { display: none; font-family: var(--font-display); font-weight: 500; font-size: 0.98rem; color: var(--diep); background: var(--wit); border: 1.5px solid var(--diep); border-radius: 999px; padding: 7px 16px; cursor: pointer; align-items: center; gap: 8px; transition: background-color .18s ease, color .18s ease; }
 .menu-knop:hover, .menu-knop[aria-expanded="true"] { background: var(--diep); color: var(--wit); }
 .menu-knop svg { width: 16px; height: 16px; }
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .menu-knop { display: inline-flex; }
   .kopbalk nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--wit); border-bottom: 1px solid var(--rand); box-shadow: 0 16px 30px -20px rgba(0, 0, 0, .35); padding: 4px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); font-size: 1.15rem; }
   .kopbalk.menu-open nav { display: flex; }
@@ -193,6 +193,39 @@ header { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; paddin
 .pil-knop { font: inherit; border: 0; background: transparent; color: inherit; padding: 7px 11px; border-radius: 999px; cursor: pointer; transition: background-color .18s ease; }
 .pil-knop:hover { background: var(--indigolicht); }
 
+/* ---------- Lijnen als stijlelement ---------- */
+.lijn-paneel { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: clamp(24px, 4vw, 48px); display: grid; gap: 24px; }
+.lijnspel { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.lijnlaag { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.lijnlaag line { stroke: var(--zand); }
+.beeld { border-radius: 4px; aspect-ratio: 1 / 1; background: linear-gradient(140deg, color-mix(in srgb, var(--indigo) 22%, #FFFFFF), color-mix(in srgb, var(--teal) 30%, #FFFFFF)); display: grid; place-items: center; align-content: center; gap: 6px; color: var(--diep); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; }
+.beeld svg { width: 28px; height: 28px; opacity: .75; }
+.ls-logo { row-gap: clamp(40px, 6vw, 64px); }
+.ls-1 { grid-column: 1 / span 5; grid-row: 1; }
+.ls-2 { grid-column: 4 / -1; grid-row: 2; }
+.ls-3 { grid-column: 1 / span 3; grid-row: 3; }
+.ls-tekst { background: var(--indigolicht); padding: clamp(20px, 3vw, 32px); display: grid; gap: 12px; align-content: start; }
+.ls-tekst h3 { color: var(--diep); font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-weight: 500; }
+.ls-draad { row-gap: clamp(44px, 7vw, 80px); }
+.ls-1, .ls-2, .ls-3, .ls-kaart { will-change: transform; }
+.ls-kaart { display: grid; gap: 8px; align-content: start; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 14px; }
+.ls-kaart b { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--diep); }
+.ls-kaart small { color: var(--zacht); font-size: 0.92rem; line-height: 1.45; }
+.k1 { grid-column: 1 / span 5; grid-row: 1; }
+.k2 { grid-column: 7 / span 6; grid-row: 2; }
+.k3 { grid-column: 1 / span 5; grid-row: 3; }
+.gespiegeld .k1, .gespiegeld .k3 { grid-column: 8 / span 5; }
+.gespiegeld .k2 { grid-column: 1 / span 5; }
+@media (max-width: 640px) {
+  .ls-1 { grid-column: 1 / span 9; }
+  .ls-3 { grid-column: 1 / span 6; }
+  .ls-2 { grid-column: 3 / -1; }
+  .k1, .k3 { grid-column: 1 / span 10; }
+  .k2 { grid-column: 3 / -1; }
+  .gespiegeld .k1, .gespiegeld .k3 { grid-column: 3 / -1; }
+  .gespiegeld .k2 { grid-column: 1 / span 10; }
+}
+
 /* ---------- Tabellen ---------- */
 .tabel-box { overflow-x: auto; border: 1px solid var(--rand); border-radius: var(--radius); background: var(--wit); }
 table { border-collapse: collapse; width: 100%; min-width: 580px; font-size: 0.95rem; }
@@ -200,7 +233,7 @@ th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--ra
 tr:last-child td { border-bottom: 0; }
 th { font-family: var(--font-ui); font-size: 0.68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--zacht); font-weight: 500; }
 td.num { font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.proef { display: inline-flex; align-items: center; justify-content: center; min-width: 96px; padding: 6px 12px; font-weight: 700; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--rand); }
+.proef { display: inline-flex; align-items: center; justify-content: center; min-width: 96px; padding: 6px 12px; font-family: var(--font-display); font-weight: 500; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--rand); }
 .mini { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .mini i { width: 16px; height: 16px; border-radius: 3px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(28,26,69,.2); flex: none; }
 .mini code { font-family: var(--font-mono); font-size: 0.76rem; color: var(--zacht); }
@@ -223,7 +256,7 @@ td.num { font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric
 .voorbeeld { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rand); background: var(--wit); }
 .vb-pad { padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(40px, 6vw, 72px); }
 /* De doorlopende zandlijn links, zoals in het homepage-ontwerp */
-.vb-lijn { background: linear-gradient(var(--zand), var(--zand)) no-repeat clamp(14px, 2.4vw, 26px) 0 / 3px 100%, var(--wit); }
+.vb-lijn { background: linear-gradient(var(--zand), var(--zand)) no-repeat clamp(14px, 2.4vw, 26px) 0 / clamp(5px, 0.45vw + 3px, 8px) 100%, var(--wit); }
 .vb-hero { position: relative; display: grid; gap: clamp(28px, 5vw, 56px); padding-bottom: clamp(48px, 7vw, 88px); }
 .vb-kop { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .vb-kop nav { display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-display); font-size: 0.88rem; font-weight: 500; color: var(--diep); }
@@ -311,6 +344,7 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
       <a href="#h-logo">Logo</a>
       <a href="#h-kleuren">Kleuren</a>
       <a href="#h-varianten">Varianten</a>
+      <a href="#h-lijnen">Lijnen</a>
       <a href="#h-combi">Leesbaarheid</a>
       <a href="#h-code">Code</a>
     </nav>
@@ -495,6 +529,42 @@ footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--ran
         <blockquote class="citaat">Amsterdam is een stad die door migratie is gevormd. Generaties mensen hebben hier een nieuw bestaan opgebouwd en hun kennis, ervaringen, culturen en talenten aan de stad toegevoegd.</blockquote>
         <span class="onderschrift">Voorbeeld · opbouw en tekst ingekort uit NNA Homepage 1</span>
       </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-lijnen">
+    <div class="section-head">
+      <span class="label">Lijnen als stijlelement</span>
+      <h2 id="h-lijnen">De lijnen verbinden ook beeld en tekst</h2>
+      <p>In het logo verbinden de lijnen de drie woorden. Op de website kunnen ze op dezelfde manier foto&rsquo;s en tekstblokken met elkaar verbinden: van hoek naar hoek, met marge, in de lijnkleur. Scroll rustig: de beelden bewegen licht verschillend mee en de lijnen blijven verbonden, ook op de telefoon.</p>
+    </div>
+    <div class="lijn-paneel">
+      <span class="onderschrift">Het logo als opbouw · beeld, tekst, beeld</span>
+      <div class="lijnspel ls-logo" id="lijnspel-logo">
+        <div class="beeld ls-1" role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div>
+        <div class="ls-2 ls-tekst">
+          <span class="vb-klein">Samen maken we de stad</span>
+          <h3>Grote en kleine organisaties, verbonden door één overtuiging</h3>
+          <p>Iedereen moet vanaf dag één de kans krijgen om volwaardig mee te doen in Amsterdam.</p>
+          <div class="knoppen"><button type="button" class="knop diep" data-voorbeeld>Lees meer</button></div>
+        </div>
+        <div class="beeld ls-3 breed" role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div>
+      </div>
+    </div>
+    <div class="lijn-paneel">
+      <span class="onderschrift">De verhalen in de vorm van het logo, gespiegeld</span>
+      <div class="lijnspel ls-draad gespiegeld" id="lijnspel-draad">
+        <article class="ls-kaart k1"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Amjad</b><small>&ldquo;Ik voel me nu vrij om te doen wat ik wil en om te zijn wie ik ben.&rdquo;</small></article>
+        <article class="ls-kaart k2"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Nagla</b><small>Over aankomen, meedoen en je thuis voelen in Amsterdam.</small></article>
+        <article class="ls-kaart k3"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Bayan &amp; Mariana</b><small>Twee levens die elkaar kruisen in het netwerk van organisaties en vrijwilligers.</small></article>
+      </div>
+    </div>
+    <div class="regels">
+      <div class="regel"><h3>Van hoek naar hoek</h3><p>Een lijn begint en eindigt bij de hoek van een foto of tekstblok, zoals de lijnen in het logo bij de woorden beginnen.</p></div>
+      <div class="regel"><h3>Altijd wat marge</h3><p>Tussen lijn en blok blijft ruimte van ongeveer twee keer de lijndikte, net als de margecirkel in het logo. Zo raakt een lijn geen tekst of beeld.</p></div>
+      <div class="regel"><h3>Ook gespiegeld</h3><p>De opbouw mag ook in spiegelbeeld, met de staande lijn rechts. Wissel gerust af, zodat de pagina in balans blijft.</p></div>
+      <div class="regel"><h3>Rust eromheen</h3><p>Eén lijnenspel per scherm is genoeg. De rest van de pagina blijft open en rustig.</p></div>
+      <div class="regel"><h3>Beweegt mee</h3><p>De lijnen worden op elk scherm en bij elke scrollbeweging opnieuw berekend, van telefoon tot breed beeld. Wie minder beweging wil, ziet de beelden stil staan.</p></div>
     </div>
   </section>
 
@@ -954,6 +1024,56 @@ document.getElementById('kopieer-css').addEventListener('click', () => {
   const pre = document.getElementById('css-code');
   navigator.clipboard.writeText(pre.textContent).then(() => meld('CSS gekopieerd'), () => { selecteer(pre); meld('Selecteer en kopieer met ⌘C / Ctrl+C'); });
 });
+
+/* ===== Lijnen als verbinding tussen beeld en tekst ===== */
+/* Lijndikte 5–8 px naar schermbreedte; de marge is twee keer de lijndikte, zoals de margecirkel in het logo */
+const SPELLEN = [];
+const lijnDikte = () => Math.min(8, Math.max(5, innerWidth * 0.0045 + 3));
+function lijnspel(vak, regels) {
+  const laag = mk('svg', { class: 'lijnlaag', 'aria-hidden': 'true' });
+  vak.prepend(laag);
+  const teken = () => {
+    const o = vak.getBoundingClientRect();
+    const blok = sel => { const b = vak.querySelector(sel).getBoundingClientRect(); return { l: b.left - o.left, t: b.top - o.top, r: b.right - o.left, b: b.bottom - o.top }; };
+    const d = lijnDikte();
+    laag.replaceChildren(...regels(blok, Math.round(d * 2), d).map(([x1, y1, x2, y2]) => mk('line', { x1, y1, x2, y2, 'stroke-width': d })));
+  };
+  new ResizeObserver(teken).observe(vak);
+  teken();
+  SPELLEN.push({ vak, teken });
+}
+/* Zelfde opbouw als het logo: de lijn boven, de lijn onder en de staande lijn links, buitenom */
+const drieLijnen = (a, b, c, spiegel = false) => (blok, m, d) => {
+  const A = blok(a), B = blok(b), C = blok(c);
+  if (spiegel) return [[A.l - m, A.t, B.l, B.t - m], [B.l, B.b + m, C.l - m, C.b], [A.r - d / 2, A.b + m, A.r - d / 2, C.t - m]];
+  return [[A.r + m, A.t, B.r, B.t - m], [B.r, B.b + m, C.r + m, C.b], [A.l + d / 2, A.b + m, A.l + d / 2, C.t - m]];
+};
+lijnspel(document.getElementById('lijnspel-logo'), drieLijnen('.ls-1', '.ls-2', '.ls-3'));
+lijnspel(document.getElementById('lijnspel-draad'), drieLijnen('.k1', '.k2', '.k3', true));
+
+/* Parallax: de blokken bewegen licht verschillend mee met scrollen, de lijnen blijven verbonden */
+const DIEPTE = { '.ls-1': -0.05, '.ls-2': 0.07, '.ls-3': -0.03, '.k1': -0.05, '.k2': 0.07, '.k3': -0.03 };
+const rustig = matchMedia('(prefers-reduced-motion: reduce)');
+function parallax() {
+  SPELLEN.forEach(({ vak, teken }) => {
+    const o = vak.getBoundingClientRect();
+    if (o.bottom < -300 || o.top > innerHeight + 300) return;
+    const schaal = rustig.matches ? 0 : innerWidth < 760 ? 0.6 : 1;
+    Object.entries(DIEPTE).forEach(([sel, f]) => {
+      const el = vak.querySelector(sel); if (!el) return;
+      const midden = o.top + el.offsetTop + el.offsetHeight / 2;
+      const v = clamp(-24, -(midden - innerHeight / 2) * f, 24) * schaal;
+      el.style.transform = v ? `translate3d(0, ${v.toFixed(1)}px, 0)` : '';
+    });
+    teken();
+  });
+}
+let pBezig = false;
+const pPlan = () => { if (pBezig) return; pBezig = true; requestAnimationFrame(() => { pBezig = false; parallax(); }); };
+window.addEventListener('scroll', pPlan, { passive: true });
+window.addEventListener('resize', pPlan);
+rustig.addEventListener?.('change', pPlan);
+parallax();
 
 /* Menu: op de telefoon uitklapbaar; de link houdt de gekozen variant */
 const menuKnop = document.getElementById('menu-knop');
