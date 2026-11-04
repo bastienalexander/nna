@@ -620,7 +620,8 @@ const clamp = (min, v, max) => Math.max(min, Math.min(max, v));
 const lerp = (a, b, t) => a + (b - a) * t;
 /* Klein logo, iets ruimere letterspatie, zoals in het grid: -0,004 em bij 18 px, -0,016 em vanaf 60 px */
 const spatie = s => -0.004 - 0.012 * clamp(0, (s - 18) / 42, 1);
-const standaardMax = W => Math.max(18, Math.min(120, 0.085 * W));
+/* Grootste lettergrootte van het open logo: op desktop 8,5% van de breedte, op de telefoon relatief groter (tot 13%) */
+const standaardMax = W => { const f = 0.13 - 0.045 * clamp(0, (W - 400) / 600, 1); return Math.max(18, Math.min(120, f * W)); };
 
 function mk(tag, attrs, ouder) {
   const e = document.createElementNS(NS, tag);
