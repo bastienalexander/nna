@@ -1,0 +1,1111 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netwerk Nieuwkomers Amsterdam</title>
+<meta name="description" content="De eerdere versie van de huisstijl, met alle 25 kleurvoorstellen uit de kleur-pdf.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Netwerk Nieuwkomers Amsterdam">
+<meta property="og:title" content="Netwerk Nieuwkomers Amsterdam · 25 kleurvoorstellen">
+<meta property="og:description" content="De eerdere versie van de huisstijl, met alle 25 kleurvoorstellen uit de kleur-pdf.">
+<meta property="og:url" content="https://bastienalexander.github.io/nna/huisstijl-25-voorstellen.html">
+<meta property="og:image" content="https://bastienalexander.github.io/nna/huisstijl-25-voorstellen-voorbeeld.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Het logo van Netwerk Nieuwkomers Amsterdam met de kleuren van de huisstijl">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Netwerk Nieuwkomers Amsterdam · 25 kleurvoorstellen">
+<meta name="twitter:description" content="De eerdere versie van de huisstijl, met alle 25 kleurvoorstellen uit de kleur-pdf.">
+<meta name="twitter:image" content="https://bastienalexander.github.io/nna/huisstijl-25-voorstellen-voorbeeld.png">
+<link rel="icon" type="image/png" href="huisstijl-25-voorstellen-icoon.png">
+<link rel="apple-touch-icon" href="huisstijl-25-voorstellen-icoon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:wght@300..800&family=Figtree:wght@300..900&family=Martian+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: het logo opent groot over de volle breedte en schuift bij scrollen klein naar de hoek linksboven; daaronder een meeschalend logo, de kleuren, leesbaarheid, betekenis, een voorbeeld en code. Eén licht thema. */
+:root {
+  color-scheme: light;
+  --op-hoofd: #FFFFFF;
+  --op-steun1: #FFFFFF;
+  --op-steun2: #FFFFFF;
+  /* Basiskleuren */
+  --indigo: #6F66F7;
+  --zand: #F6D089;
+  --roze: #EE868D;
+  --teal: #509990;
+  /* Aanvullend */
+  --diep: #4F49B5;
+  --inkt: #1C1A45;
+  --papier: #FFFFFF;
+  --wit: #FFFFFF;
+  --indigolicht: #ECE9FE;
+  --zandlicht: #FBE9C6;
+  --zacht: #5F5B99;
+  --rand: #E3E0F5;
+  /* Betekenis */
+  --ok: #1B7346;
+  --warn: #8A5A00;
+  --err: #B42335;
+  --info: #4F49B5;
+  --ok-bg: #E4F4EA;
+  --warn-bg: #FDF6E7;
+  --err-bg: #FBE6E9;
+  --info-bg: #ECE9FE;
+
+  --font-display: "Funnel Display", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-ui: "Funnel Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-body: "Figtree", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: clamp(1.8rem, 1.4rem + 1.6vw, 2.5rem);
+  --radius: 6px;
+  --kop-h: 86px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: calc(var(--kop-h) + 16px); }
+body {
+  background: var(--papier);
+  color: var(--diep);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 41; background: var(--papier); }
+.wrap { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 96px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.12; color: var(--diep); }
+h2 { color: var(--indigo); }
+h1 { font-size: var(--step-2); font-weight: 700; letter-spacing: -0.015em; }
+h2 { font-size: var(--step-2); font-weight: 700; letter-spacing: -0.015em; }
+h3 { font-size: var(--step-1); font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+.label { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--diep); font-weight: 500; }
+section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.section-head { display: grid; gap: 10px; }
+.section-head p { color: var(--zacht); }
+:focus-visible { outline: 3px solid var(--indigo); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Logo (gedeeld) ---------- */
+.nna-logo, .nna-kort { position: relative; }
+.nna-logo svg, .nna-kort svg { display: block; overflow: visible; }
+.nna-logo .g, .nna-kort .g { fill: var(--logo-tekst, var(--indigo)); }
+.nna-logo line, .nna-kort line { stroke: var(--logo-lijn, var(--zand)); }
+.nna-logo .grid { display: none; }
+.nna-logo .grid * { fill: none; stroke: #FF00FF; stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.nna-logo.met-grid .grid { display: inline; }
+.vinkje { display: inline-flex; gap: 8px; align-items: center; font-family: var(--font-ui); font-weight: 600; font-size: 0.92rem; cursor: pointer; }
+.vinkje input { accent-color: var(--diep); width: 18px; height: 18px; margin: 0; }
+.korts { display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch; }
+.kort-vak { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 24px; display: grid; gap: 14px; align-content: space-between; justify-items: start; }
+.kort-vak span { font-family: var(--font-ui); font-size: 0.75rem; color: var(--zacht); }
+
+/* ---------- Kopbalk en opening ---------- */
+.kopbalk {
+  position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); height: var(--kop-h); z-index: 40;
+  background: color-mix(in srgb, var(--papier) 94%, transparent);
+  border-bottom: 1px solid var(--rand);
+  backdrop-filter: blur(8px);
+  opacity: 0; pointer-events: none;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.kopbalk.zichtbaar { pointer-events: auto; }
+.kopbalk-in { max-width: 1100px; margin: 0 auto; height: 100%; display: flex; justify-content: flex-end; align-items: center; }
+.kopbalk nav { display: flex; gap: 22px; font-weight: 500; font-size: 0.98rem; font-family: var(--font-display); }
+.kopieer#kopieer-css { font-family: var(--font-ui) !important; }
+.chip { font-family: var(--font-display) !important; font-weight: 500 !important; }
+.kopbalk nav a { color: var(--diep); text-decoration: none; }
+.kopbalk nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.menu-knop { display: none; font-family: var(--font-display); font-weight: 500; font-size: 0.98rem; color: var(--diep); background: var(--wit); border: 1.5px solid var(--diep); border-radius: 999px; padding: 7px 16px; cursor: pointer; align-items: center; gap: 8px; transition: background-color .18s ease, color .18s ease; }
+.menu-knop:hover, .menu-knop[aria-expanded="true"] { background: var(--diep); color: var(--wit); }
+.menu-knop svg { width: 16px; height: 16px; }
+@media (max-width: 760px) {
+  .menu-knop { display: inline-flex; }
+  .kopbalk nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--wit); border-bottom: 1px solid var(--rand); box-shadow: 0 16px 30px -20px rgba(0, 0, 0, .35); padding: 4px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); font-size: 1.15rem; }
+  .kopbalk.menu-open nav { display: flex; }
+  .kopbalk nav a { padding: 13px 0; border-bottom: 1px solid var(--rand); }
+  .kopbalk nav a:last-child { border-bottom: 0; }
+}
+.logo-laag { position: fixed; left: 0; top: 0; z-index: 45; }
+header { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 28px; }
+.hero-ruimte { height: min(clamp(300px, 62vh, 620px), 125vw); }
+.intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: end; border-top: 1px solid var(--rand); padding-top: 28px; }
+.intro p { font-size: var(--step-1); line-height: 1.45; }
+.intro .meta { display: grid; gap: 8px; justify-items: start; }
+.scrolhint { font-size: 0.9rem; color: var(--zacht); display: inline-flex; gap: 8px; align-items: center; }
+.scrolhint svg { width: 16px; height: 16px; color: var(--indigo); }
+@media (max-width: 760px) { .intro { grid-template-columns: 1fr; } }
+
+/* ---------- Meeschalend logo ---------- */
+.demo { display: grid; gap: 16px; }
+.demo-bediening { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: end; }
+.schuif { display: grid; gap: 4px; min-width: 0; flex: 1 1 220px; }
+.schuif label { font-weight: 600; font-size: 0.92rem; display: flex; justify-content: space-between; gap: 12px; }
+.schuif output { font-family: var(--font-mono); font-size: 0.78rem; color: var(--zacht); font-variant-numeric: tabular-nums; }
+.schuif input { width: 100%; accent-color: var(--indigo); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: inherit; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--diep); color: var(--diep); background: var(--wit); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--diep); color: var(--wit); }
+.demo-veld { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 28px; overflow: hidden; display: grid; justify-items: start; }
+.demo-doos { position: relative; outline: 1.5px dashed var(--indigo); outline-offset: 14px; max-width: 100%; }
+.demo-maat { font-family: var(--font-mono); font-size: 0.75rem; color: var(--zacht); font-variant-numeric: tabular-nums; }
+.varianten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 820px) { .varianten { grid-template-columns: 1fr; } }
+.variant { border-radius: var(--radius); padding: 28px 24px; display: grid; gap: 20px; background: var(--vbg); border: 1px solid var(--vrand, transparent); }
+.variant .vak { height: 150px; position: relative; }
+.variant span { font-family: var(--font-ui); font-size: 0.72rem; color: var(--vlabel); letter-spacing: .04em; }
+
+/* ---------- Kleuren ---------- */
+.kern { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .kern { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .kern { grid-template-columns: 1fr; } }
+.kaart { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.staal { min-height: 130px; background: var(--c); color: var(--t); padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: inset 0 -1px 0 var(--rand); }
+.staal .bron { align-self: flex-start; font-family: var(--font-ui); font-size: 0.66rem; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; }
+.staal .aa { font-size: 2rem; font-weight: 700; line-height: 1; }
+.kaart-tekst { padding: 14px 16px 16px; display: grid; gap: 6px; align-content: start; }
+.kaart-tekst h3 { font-size: 1.2rem; }
+.kaart-tekst p { font-size: 0.95rem; color: var(--zacht); }
+.codes { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 4px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--zacht); font-variant-numeric: tabular-nums; }
+.kopieer {
+  font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; color: var(--diep);
+  background: var(--wit); border: 1px solid var(--rand); border-radius: 4px; padding: 4px 8px; cursor: pointer;
+  display: inline-flex; gap: 6px; align-items: center;
+}
+.kopieer:hover { border-color: var(--diep); }
+.kopieer svg { width: 12px; height: 12px; }
+.steun { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .steun { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .steun { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mini-kaart { display: grid; gap: 8px; }
+.mini-kaart .vlak { height: 64px; border-radius: var(--radius); background: var(--c); border: 1px solid var(--rand); }
+.mini-kaart b { font-size: 0.95rem; }
+.mini-kaart small { color: var(--zacht); font-size: 0.85rem; line-height: 1.4; }
+
+.concept { display: inline-block; margin-left: 10px; padding: 2px 10px; border-radius: 999px; border: 1px solid currentColor; letter-spacing: .06em; }
+/* ---------- Kleurvoorstellen ---------- */
+.varianten-raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+.vk { font: inherit; text-align: left; color: var(--diep); background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 16px; display: grid; gap: 12px; cursor: pointer; transition: border-color .18s ease, background-color .18s ease; }
+.vk:hover { border-color: var(--diep); }
+.vk[aria-pressed="true"] { border-color: var(--diep); box-shadow: inset 0 0 0 1px var(--diep); }
+.vk-logo-vak { display: block; height: 96px; }
+.vk-logo { display: block; }
+.vk-vlakken { display: flex; gap: 6px; height: 34px; }
+.vk-vlakken i { flex: var(--f) 1 0; background: var(--c); border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06); }
+.vk-naam { font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; line-height: 1.15; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.vk-naam em { font-style: normal; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; color: var(--zacht); }
+.vk-kleuren { font-family: var(--font-ui); font-size: 0.85rem; color: var(--zacht); margin-top: -8px; }
+.vk-codes { font-family: var(--font-mono); font-size: 0.64rem; margin-top: -6px; color: var(--zacht); line-height: 1.5; }
+.variant-pil { position: fixed; left: max(16px, env(safe-area-inset-left, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 55; display: flex; align-items: center; gap: 2px; background: var(--wit); border: 1px solid var(--rand); border-radius: 999px; padding: 5px 5px 5px 16px; box-shadow: 0 10px 30px -14px rgba(0, 0, 0, .4); font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600; color: var(--diep); }
+.variant-pil[hidden] { display: none; }
+.variant-pil span { margin-right: 6px; white-space: nowrap; }
+.pil-knop { font: inherit; border: 0; background: transparent; color: inherit; padding: 7px 11px; border-radius: 999px; cursor: pointer; transition: background-color .18s ease; }
+.pil-knop:hover { background: var(--indigolicht); }
+
+/* ---------- Lijnen als stijlelement ---------- */
+.lijn-paneel { background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: clamp(24px, 4vw, 48px); display: grid; gap: 24px; }
+.lijnspel { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.lijnlaag { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.lijnlaag line { stroke: var(--zand); }
+.beeld { border-radius: 4px; aspect-ratio: 1 / 1; background: linear-gradient(140deg, color-mix(in srgb, var(--indigo) 22%, #FFFFFF), color-mix(in srgb, var(--teal) 30%, #FFFFFF)); display: grid; place-items: center; align-content: center; gap: 6px; color: var(--diep); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; }
+.beeld svg { width: 28px; height: 28px; opacity: .75; }
+.ls-logo { row-gap: clamp(40px, 6vw, 64px); }
+.ls-1 { grid-column: 1 / span 5; grid-row: 1; }
+.ls-2 { grid-column: 4 / -1; grid-row: 2; }
+.ls-3 { grid-column: 1 / span 3; grid-row: 3; }
+.ls-tekst { background: var(--indigolicht); padding: clamp(20px, 3vw, 32px); display: grid; gap: 12px; align-content: start; }
+.ls-tekst h3 { color: var(--diep); font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-weight: 500; }
+.ls-draad { row-gap: clamp(44px, 7vw, 80px); }
+.ls-1, .ls-2, .ls-3, .ls-kaart { will-change: transform; }
+.ls-kaart { display: grid; gap: 8px; align-content: start; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 14px; }
+.ls-kaart b { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--diep); }
+.ls-kaart small { color: var(--zacht); font-size: 0.92rem; line-height: 1.45; }
+.k1 { grid-column: 1 / span 5; grid-row: 1; }
+.k2 { grid-column: 7 / span 6; grid-row: 2; }
+.k3 { grid-column: 1 / span 5; grid-row: 3; }
+.gespiegeld .k1, .gespiegeld .k3 { grid-column: 8 / span 5; }
+.gespiegeld .k2 { grid-column: 1 / span 5; }
+@media (max-width: 640px) {
+  .ls-1 { grid-column: 1 / span 9; }
+  .ls-3 { grid-column: 1 / span 6; }
+  .ls-2 { grid-column: 3 / -1; }
+  .k1, .k3 { grid-column: 1 / span 10; }
+  .k2 { grid-column: 3 / -1; }
+  .gespiegeld .k1, .gespiegeld .k3 { grid-column: 3 / -1; }
+  .gespiegeld .k2 { grid-column: 1 / span 10; }
+}
+
+/* ---------- Tabellen ---------- */
+.tabel-box { overflow-x: auto; border: 1px solid var(--rand); border-radius: var(--radius); background: var(--wit); }
+table { border-collapse: collapse; width: 100%; min-width: 580px; font-size: 0.95rem; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rand); vertical-align: middle; }
+tr:last-child td { border-bottom: 0; }
+th { font-family: var(--font-ui); font-size: 0.68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--zacht); font-weight: 500; }
+td.num { font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.proef { display: inline-flex; align-items: center; justify-content: center; min-width: 96px; padding: 6px 12px; font-family: var(--font-display); font-weight: 500; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--rand); }
+.mini { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.mini i { width: 16px; height: 16px; border-radius: 3px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(28,26,69,.2); flex: none; }
+.mini code { font-family: var(--font-mono); font-size: 0.76rem; color: var(--zacht); }
+.oordeel { font-family: var(--font-ui); font-size: 0.74rem; font-weight: 500; }
+.oordeel.goed { color: var(--ok); }
+.oordeel.matig { color: var(--warn); }
+.oordeel.nee { color: var(--err); }
+
+/* ---------- Betekenis ---------- */
+.staten { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 860px) { .staten { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .staten { grid-template-columns: 1fr; } }
+.staat { padding: 16px; display: grid; gap: 10px; align-content: start; background: var(--sbg); border-radius: var(--radius); }
+.staat .kop { display: flex; gap: 10px; align-items: center; font-weight: 700; color: var(--s); }
+.staat .kop svg { width: 22px; height: 22px; flex: none; }
+.staat p { font-size: 0.95rem; }
+.staat code { font-family: var(--font-mono); font-size: 0.72rem; color: var(--zacht); }
+
+/* ---------- Voorbeeld ---------- */
+.voorbeeld { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rand); background: var(--wit); }
+.vb-pad { padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(40px, 6vw, 72px); }
+/* De doorlopende zandlijn links, zoals in het homepage-ontwerp */
+.vb-lijn { background: linear-gradient(var(--zand), var(--zand)) no-repeat clamp(14px, 2.4vw, 26px) 0 / clamp(5px, 0.45vw + 3px, 8px) 100%, var(--wit); }
+.vb-hero { position: relative; display: grid; gap: clamp(28px, 5vw, 56px); padding-bottom: clamp(48px, 7vw, 88px); }
+.vb-kop { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.vb-kop nav { display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-display); font-size: 0.88rem; font-weight: 500; color: var(--diep); }
+.vb-hero-tekst { display: grid; gap: 18px; max-width: 34rem; }
+.vb-hero h3 { color: var(--indigo); font-size: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem); font-weight: 500; line-height: 1.15; }
+.vb-klein { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; color: var(--diep); }
+.vb-indigo { background: var(--indigo); color: var(--op-hoofd); display: grid; gap: 20px; }
+.vb-indigo h3 { color: var(--op-hoofd); font-size: var(--step-2); font-weight: 500; }
+.vb-indigo p { color: var(--op-hoofd); font-size: 1.5rem; line-height: 1.35; max-width: 32ch; }
+.vb-roze { background: var(--roze); color: var(--op-steun1); display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(0, .5fr)); gap: 24px; align-items: start; }
+.vb-roze h3 { color: var(--op-steun1); font-size: 1.6rem; font-weight: 500; }
+.stat { border-left: 1.5px solid var(--op-steun1); padding-left: 14px; display: grid; }
+.stat b { font-size: 2.2rem; line-height: 1.05; font-weight: 500; font-family: var(--font-display); }
+.stat span { font-size: 0.82rem; color: var(--op-steun1); }
+.vb-licht { display: grid; gap: 20px; }
+.vb-kaarten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--rand); background: var(--wit); }
+.vb-kaart { padding: 18px; display: grid; gap: 4px; border-right: 1px solid var(--rand); border-bottom: 1px solid var(--rand); }
+.vb-kaart:nth-child(2n) { border-right: 0; }
+.vb-kaart:nth-child(n+3) { border-bottom: 0; }
+.vb-kaart .nr { font-size: 1.8rem; color: var(--indigo); line-height: 1; font-weight: 500; font-family: var(--font-display); }
+.vb-kaart b { color: var(--diep); }
+.vb-kaart small { color: var(--zacht); font-size: 0.9rem; }
+.vb-teal { background: var(--teal); display: grid; gap: 16px; }
+.vb-teal .vb-klein { color: var(--op-steun2); }
+.vb-teal h3 { color: var(--op-steun2); font-size: var(--step-2); font-weight: 500; }
+.vb-partners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--wit); border-radius: 4px; }
+.vb-partners div { padding: 26px 12px; text-align: center; font-family: var(--font-display); font-weight: 700; color: var(--diep); line-height: 1.15; border-right: 1px solid var(--rand); }
+.vb-partners div:last-child { border-right: 0; }
+.citaat { margin: 0; background: var(--zandlicht); color: var(--diep); padding: clamp(20px, 3vw, 32px); font-family: var(--font-display); font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); font-weight: 500; line-height: 1.4; }
+.knop { font-family: var(--font-display); font-weight: 500; font-size: 0.98rem; line-height: 1.2; padding: 11px 20px; cursor: pointer; border-radius: 6px; border: 1.5px solid transparent; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+.knop.wit { background: var(--wit); color: var(--diep); }
+.knop.wit:hover { background: var(--indigolicht); }
+.knop.diep { background: var(--diep); color: var(--wit); }
+.knop.diep:hover { background: var(--indigo); }
+.knop.omlijnd { background: transparent; color: var(--diep); border-color: var(--diep); }
+.knop.omlijnd:hover { background: var(--diep); color: var(--wit); }
+.chip, .kopieer { transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+.chip:hover { background: var(--indigolicht); }
+.chip[aria-pressed="true"]:hover { background: var(--indigo); border-color: var(--indigo); }
+.kopieer:hover { background: var(--indigolicht); }
+@media (prefers-reduced-motion: reduce) { .knop, .chip, .kopieer { transition: none; } }
+.knoppen { display: flex; flex-wrap: wrap; gap: 10px; }
+.onderschrift { font-family: var(--font-ui); font-size: 0.68rem; color: var(--zacht); letter-spacing: .08em; text-transform: uppercase; }
+/* Verhouding van de kleuren */
+.dosering { display: grid; gap: 12px; }
+.dosering-balk { display: flex; height: 56px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rand); }
+.dosering-balk i { flex: var(--f) 1 0; background: var(--c); }
+.dosering-legenda { display: flex; flex-wrap: wrap; gap: 6px 20px; font-family: var(--font-ui); font-size: 0.85rem; color: var(--zacht); }
+.dosering-legenda span { display: inline-flex; gap: 8px; align-items: center; }
+.dosering-legenda span::before { content: ""; width: 12px; height: 12px; border-radius: 2px; background: var(--c); box-shadow: inset 0 0 0 1px var(--rand); }
+@media (max-width: 760px) {
+  .vb-roze { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .vb-roze h3 { grid-column: 1 / -1; }
+  .vb-kaarten { grid-template-columns: 1fr; }
+  .vb-kaart { border-right: 0; }
+  .vb-kaart:nth-child(n+3) { border-bottom: 1px solid var(--rand); }
+  .vb-kaart:last-child { border-bottom: 0; }
+  .vb-partners { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vb-partners div:nth-child(2) { border-right: 0; }
+  .vb-partners div:nth-child(-n+2) { border-bottom: 1px solid var(--rand); }
+  .vb-indigo p { font-size: 1.3rem; }
+}
+
+/* ---------- Regels ---------- */
+.regels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 8px 32px; }
+.regel { display: grid; gap: 6px; padding-block: 16px; border-top: 2px solid var(--rand); }
+.regel h3 { font-size: 1.15rem; }
+.regel p { color: var(--zacht); font-size: 0.97rem; }
+
+/* ---------- Code ---------- */
+.code-box { position: relative; background: var(--inkt); color: #EEEDFE; border-radius: var(--radius); }
+.code-box pre { margin: 0; padding: 22px; overflow-x: auto; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.7; }
+.code-box .kopieer { position: absolute; top: 12px; right: 12px; }
+
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--diep); color: var(--wit); padding: 8px 18px; border-radius: 999px; font-size: 0.92rem; font-weight: 600; z-index: 60; }
+footer { color: var(--zacht); font-size: 0.9rem; border-top: 1px solid var(--rand); padding-top: 20px; }
+.veilig-boven { position: fixed; top: 0; height: env(safe-area-inset-top, 0px); width: 0; visibility: hidden; }
+</style>
+
+<span class="veilig-boven" id="veilig-boven" aria-hidden="true"></span>
+<div class="kopbalk" id="kopbalk">
+  <div class="kopbalk-in">
+    <button type="button" class="menu-knop" id="menu-knop" aria-expanded="false" aria-controls="menu-lijst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+    <nav aria-label="Secties" id="menu-lijst">
+      <a href="#h-logo">Logo</a>
+      <a href="#h-kleuren">Kleuren</a>
+      <a href="#h-varianten">Varianten</a>
+      <a href="#h-lijnen">Lijnen</a>
+      <a href="#h-combi">Leesbaarheid</a>
+      <a href="#h-code">Code</a>
+    </nav>
+  </div>
+</div>
+<div class="logo-laag nna-logo" id="logo-laag" role="img" aria-label="Netwerk Nieuwkomers Amsterdam"></div>
+
+<div class="wrap">
+  <header>
+    <div class="hero-ruimte" id="hero-ruimte" aria-hidden="true"></div>
+    <div class="intro">
+      <div style="display:grid; gap:12px">
+        <span class="label">Huisstijl · kleuren en logo <span class="concept">Concept · nog niet definitief</span></span>
+        <h1 class="sr">Netwerk Nieuwkomers Amsterdam: huisstijl, logo en kleuren</h1>
+        <p>Wit en indigo dragen de pagina, zand verbindt gedoseerd, roze en teal steunen. Het logo met de verbindende lijnen schaalt mee met elk scherm en schuift bij scrollen klein naar de hoek linksboven.</p>
+      </div>
+      <div class="meta">
+        <span class="scrolhint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>Scroll om het logo te zien krimpen</span>
+        <span class="label" style="color: var(--zacht)">4 kleuren · 6 aanvullend</span>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-logo">
+    <div class="section-head">
+      <span class="label">Responsief logo</span>
+      <h2 id="h-logo">Eén logo voor elk formaat</h2>
+      <p>Het logo volgt het grid uit <i>NNA logo grid</i>. Elke lijn eindigt op een vaste plek naast zijn woord, met één margecirkel ruimte. In de compacte vorm staan de woorden strak onder elkaar. Is het vak breder of hoger, dan schuiven alleen de woorden uit elkaar en rekken de lijnen mee; het logo wordt nooit samengedrukt. Zet het grid aan om de marges te zien.</p>
+    </div>
+    <div class="demo">
+      <div class="demo-bediening">
+        <div class="schuif">
+          <label for="demo-b">Breedte <output id="out-b" for="demo-b"></output></label>
+          <input type="range" id="demo-b" min="120" max="1040" value="640">
+        </div>
+        <div class="schuif">
+          <label for="demo-h">Hoogte <output id="out-h" for="demo-h"></output></label>
+          <input type="range" id="demo-h" min="56" max="420" value="240">
+        </div>
+        <div class="presets" role="group" aria-label="Voorbeeldformaten">
+          <button type="button" class="chip" data-b="1040" data-h="280">Banner</button>
+          <button type="button" class="chip" data-b="360" data-h="360">Vierkant</button>
+          <button type="button" class="chip" data-b="300" data-h="420">Telefoon</button>
+          <button type="button" class="chip" data-b="130" data-h="60">Koptekst</button>
+        </div>
+        <label class="vinkje"><input type="checkbox" id="demo-grid"> Toon grid</label>
+      </div>
+      <div class="demo-veld" id="demo-veld">
+        <div class="demo-doos nna-logo" id="demo-doos" role="img" aria-label="Logo in het gekozen formaat"></div>
+      </div>
+      <span class="demo-maat" id="demo-maat"></span>
+    </div>
+
+    <div class="varianten">
+      <div class="variant" style="--vbg: var(--papier); --vrand: var(--rand); --vlabel: var(--zacht)">
+        <div class="vak nna-logo" data-variant style="--logo-tekst: var(--indigo); --logo-lijn: var(--zand)"></div>
+        <span>Standaard · indigo met zand</span>
+      </div>
+      <div class="variant" style="--vbg: var(--indigo); --vlabel: var(--op-hoofd)">
+        <div class="vak nna-logo" data-variant style="--logo-tekst: var(--op-hoofd); --logo-lijn: var(--zand)"></div>
+        <span>Op indigo · wit met zand</span>
+      </div>
+      <div class="variant" style="--vbg: var(--wit); --vrand: var(--rand); --vlabel: var(--zacht)">
+        <div class="vak nna-logo" data-variant style="--logo-tekst: var(--indigo); --logo-lijn: var(--indigo)"></div>
+        <span>Eén kleur · alleen indigo</span>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 12px">
+      <h3>Korte vorm</h3>
+      <p>Voor kleine plekken, zoals een app-icoon of de koptekst op een telefoon: NNA tussen de staande lijn en de pijl uit het grid.</p>
+    </div>
+    <div class="korts">
+      <div class="kort-vak"><div class="nna-kort" data-kort="96" role="img" aria-label="NNA"></div><span>96 px hoog</span></div>
+      <div class="kort-vak"><div class="nna-kort" data-kort="48" role="img" aria-label="NNA"></div><span>48 px</span></div>
+      <div class="kort-vak"><div class="nna-kort" data-kort="28" role="img" aria-label="NNA"></div><span>28 px</span></div>
+      <div class="kort-vak" style="background: var(--indigo); border-color: var(--indigo)"><div class="nna-kort" data-kort="48" style="--logo-tekst: var(--op-hoofd)" role="img" aria-label="NNA"></div><span style="color: var(--op-hoofd)">Op de hoofdkleur</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-kleuren">
+    <div class="section-head">
+      <span class="label">Kleuren</span>
+      <h2 id="h-kleuren">Indigo draagt, zand verbindt</h2>
+      <p>Indigo, zand, roze en teal vormen de basis. Indigo en wit maken de pagina. Zand gebruik je gedoseerd, voor de lijnen die alles verbinden. Klik op een code om hem te kopiëren.</p>
+    </div>
+    <div class="kern" id="kern"></div>
+    <div class="dosering">
+      <h3>Verhouding op een pagina</h3>
+      <div class="dosering-balk" role="img" aria-label="Ongeveer 45 procent wit, 35 procent indigo, 8 procent roze, 8 procent teal en 4 procent zand">
+        <i style="--c: var(--wit); --f: 45"></i><i style="--c: var(--indigo); --f: 35"></i><i style="--c: var(--roze); --f: 8"></i><i style="--c: var(--teal); --f: 8"></i><i style="--c: var(--zand); --f: 4"></i>
+      </div>
+      <div class="dosering-legenda"><span style="--c: var(--wit)">Wit ± 45%</span><span style="--c: var(--indigo)">Indigo ± 35%</span><span style="--c: var(--roze)">Roze ± 8%</span><span style="--c: var(--teal)">Teal ± 8%</span><span style="--c: var(--zand)">Zand ± 4%, vooral als lijn</span></div>
+    </div>
+    <div class="section-head" style="margin-top: 12px">
+      <h3>Aanvullende tinten</h3>
+      <p>Nodig voor kleine tekst, lichte vlakken en randen. Ze zijn afgeleid van indigo en zand, zodat alles bij elkaar blijft horen.</p>
+    </div>
+    <div class="steun" id="steun"></div>
+  </section>
+
+  <section aria-labelledby="h-varianten">
+    <div class="section-head">
+      <span class="label">Kleurvoorstellen</span>
+      <h2 id="h-varianten">Andere kleurcombinaties</h2>
+      <p>Vijfentwintig kleurvoorstellen, steeds met een kleur voor de woorden, een voor de lijnen en twee steunkleuren. Kies een variant om hem op de hele pagina te bekijken. Het logo, de kleuren, de leesbaarheid, het voorbeeld en de code passen zich aan. Elke variant heeft een roepnaam; eronder staan de kleur van de woorden en de lijnen. Met de link in de adresbalk kun je een variant direct delen.</p>
+    </div>
+    <div class="varianten-raster" id="varianten-raster"></div>
+  </section>
+
+  <section aria-labelledby="h-combi">
+    <div class="section-head">
+      <span class="label">Leesbaarheid</span>
+      <h2 id="h-combi">Combinaties die je kunt gebruiken</h2>
+      <p>Gewone tekst heeft 4,5 : 1 of meer nodig (AA). Vanaf 7 : 1 is hij het best leesbaar (AAA). Grote koppen mogen vanaf 3 : 1.</p>
+    </div>
+    <div class="tabel-box">
+      <table>
+        <thead><tr><th>Voorbeeld</th><th>Tekst</th><th>Achtergrond</th><th>Verhouding</th><th>Oordeel</th></tr></thead>
+        <tbody id="combi"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-betekenis">
+    <div class="section-head">
+      <span class="label">Kleuren met betekenis</span>
+      <h2 id="h-betekenis">Gelukt, let op, fout, informatie</h2>
+      <p>NNA is er voor nieuwe Amsterdammers met een migratieachtergrond. Velen lezen in een tweede of derde taal. Laat een status daarom altijd zien met een kleur, een icoon en een kort woord.</p>
+    </div>
+    <div class="staten" id="staten"></div>
+  </section>
+
+  <section aria-labelledby="h-voorbeeld">
+    <div class="section-head">
+      <span class="label">In gebruik</span>
+      <h2 id="h-voorbeeld">Zo ziet het eruit</h2>
+      <p>De opbouw van de homepage. Wit en indigo dragen de pagina, de zandlijn loopt erdoorheen, roze en teal krijgen elk één band en er is één licht zandvlak.</p>
+    </div>
+    <div class="voorbeeld">
+      <div class="vb-pad vb-hero">
+        <div class="vb-kop">
+          <div class="nna-kort" data-kort="30" role="img" aria-label="NNA"></div>
+          <nav aria-label="Voorbeeldmenu"><span>Over ons</span><span>Organisaties</span><span>Verhalen</span><span>Contact</span></nav>
+        </div>
+        <div class="vb-hero-tekst">
+          <span class="vb-klein">Netwerk Nieuwkomers Amsterdam</span>
+          <h3>Een open Amsterdams netwerk van organisaties die samenwerken aan een stad waarin nieuwkomers vanaf dag één volwaardig mee kunnen doen.</h3>
+          <div class="knoppen">
+            <button type="button" class="knop diep" data-voorbeeld>Wat we doen</button>
+            <button type="button" class="knop omlijnd" data-voorbeeld>Sluit je aan</button>
+          </div>
+        </div>
+      </div>
+      <div class="vb-pad vb-indigo">
+        <h3>Wie we zijn</h3>
+        <p>Een open en groeiend netwerk van grote en kleine organisaties die zich inzetten voor nieuwe Amsterdammers met een migratieachtergrond.</p>
+        <div class="knoppen"><button type="button" class="knop wit" data-voorbeeld>Meer over het netwerk</button></div>
+      </div>
+      <div class="vb-pad vb-roze">
+        <h3>Grote en kleine organisaties, verbonden door één overtuiging</h3>
+        <div class="stat"><b>60+</b><span>aangesloten organisaties</span></div>
+        <div class="stat"><b>4×</b><span>per jaar samen aan tafel</span></div>
+        <div class="stat"><b>1</b><span>Amsterdams netwerk</span></div>
+      </div>
+      <div class="vb-pad vb-lijn vb-licht">
+        <h3>Wat we doen</h3>
+        <div class="vb-kaarten">
+          <div class="vb-kaart"><span class="nr">01</span><b>Organisaties verbinden</b><small>We brengen organisaties bij elkaar.</small></div>
+          <div class="vb-kaart"><span class="nr">02</span><b>Kennis delen</b><small>We wisselen ervaringen uit.</small></div>
+          <div class="vb-kaart"><span class="nr">03</span><b>Signalen zichtbaar maken</b><small>We bundelen wat we zien in de praktijk.</small></div>
+          <div class="vb-kaart"><span class="nr">04</span><b>Informele plekken versterken</b><small>We steunen plekken waar nieuwkomers samenkomen.</small></div>
+        </div>
+      </div>
+      <div class="vb-pad vb-teal">
+        <span class="vb-klein">Samen maken we de stad</span>
+        <h3>Organisaties in het netwerk</h3>
+        <div class="vb-partners"><div>10,000 Hours</div><div>Amsterdamse Buurvrouwen Contact</div><div>BOOST</div><div>Coders Beyond Borders</div></div>
+      </div>
+      <div class="vb-pad vb-lijn vb-licht">
+        <h3>Hoe we zijn ontstaan</h3>
+        <blockquote class="citaat">Amsterdam is een stad die door migratie is gevormd. Generaties mensen hebben hier een nieuw bestaan opgebouwd en hun kennis, ervaringen, culturen en talenten aan de stad toegevoegd.</blockquote>
+        <span class="onderschrift">Voorbeeld · opbouw en tekst ingekort uit NNA Homepage 1</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-lijnen">
+    <div class="section-head">
+      <span class="label">Lijnen als stijlelement</span>
+      <h2 id="h-lijnen">De lijnen verbinden ook beeld en tekst</h2>
+      <p>In het logo verbinden de lijnen de drie woorden. Op de website kunnen ze op dezelfde manier foto&rsquo;s en tekstblokken met elkaar verbinden: van hoek naar hoek, met marge, in de lijnkleur. Scroll rustig: de beelden bewegen licht verschillend mee en de lijnen blijven verbonden, ook op de telefoon.</p>
+    </div>
+    <div class="lijn-paneel">
+      <span class="onderschrift">Het logo als opbouw · beeld, tekst, beeld</span>
+      <div class="lijnspel ls-logo" id="lijnspel-logo">
+        <div class="beeld ls-1" role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div>
+        <div class="ls-2 ls-tekst">
+          <span class="vb-klein">Samen maken we de stad</span>
+          <h3>Grote en kleine organisaties, verbonden door één overtuiging</h3>
+          <p>Iedereen moet vanaf dag één de kans krijgen om volwaardig mee te doen in Amsterdam.</p>
+          <div class="knoppen"><button type="button" class="knop diep" data-voorbeeld>Lees meer</button></div>
+        </div>
+        <div class="beeld ls-3 breed" role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div>
+      </div>
+    </div>
+    <div class="lijn-paneel">
+      <span class="onderschrift">De verhalen in de vorm van het logo, gespiegeld</span>
+      <div class="lijnspel ls-draad gespiegeld" id="lijnspel-draad">
+        <article class="ls-kaart k1"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Amjad</b><small>&ldquo;Ik voel me nu vrij om te doen wat ik wil en om te zijn wie ik ben.&rdquo;</small></article>
+        <article class="ls-kaart k2"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Nagla</b><small>Over aankomen, meedoen en je thuis voelen in Amsterdam.</small></article>
+        <article class="ls-kaart k3"><div class="beeld " role="img" aria-label="Plek voor een foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 8.5"/></svg><span>Foto</span></div><b>Bayan &amp; Mariana</b><small>Twee levens die elkaar kruisen in het netwerk van organisaties en vrijwilligers.</small></article>
+      </div>
+    </div>
+    <div class="regels">
+      <div class="regel"><h3>Van hoek naar hoek</h3><p>Een lijn begint en eindigt bij de hoek van een foto of tekstblok, zoals de lijnen in het logo bij de woorden beginnen.</p></div>
+      <div class="regel"><h3>Altijd wat marge</h3><p>Tussen lijn en blok blijft ruimte van ongeveer twee keer de lijndikte, net als de margecirkel in het logo. Zo raakt een lijn geen tekst of beeld.</p></div>
+      <div class="regel"><h3>Ook gespiegeld</h3><p>De opbouw mag ook in spiegelbeeld, met de staande lijn rechts. Wissel gerust af, zodat de pagina in balans blijft.</p></div>
+      <div class="regel"><h3>Rust eromheen</h3><p>Eén lijnenspel per scherm is genoeg. De rest van de pagina blijft open en rustig.</p></div>
+      <div class="regel"><h3>Beweegt mee</h3><p>De lijnen worden op elk scherm en bij elke scrollbeweging opnieuw berekend, van telefoon tot breed beeld. Wie minder beweging wil, ziet de beelden stil staan.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-regels">
+    <div class="section-head">
+      <span class="label">Handvatten</span>
+      <h2 id="h-regels">Zo komen de kleuren het best tot hun recht</h2>
+    </div>
+    <div class="regels" id="regels"></div>
+  </section>
+
+  <section aria-labelledby="h-code">
+    <div class="section-head">
+      <span class="label">Voor ontwikkelaars</span>
+      <h2 id="h-code">Het palet als CSS-variabelen</h2>
+    </div>
+    <div class="code-box">
+      <button type="button" class="kopieer" id="kopieer-css">Kopieer CSS</button>
+      <pre id="css-code"></pre>
+    </div>
+  </section>
+
+  <footer>Netwerk Nieuwkomers Amsterdam · huisstijl: logo en kleuren · concept, nog niet definitief</footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="variant-pil" id="variant-pil" hidden>
+  <span id="pil-naam" aria-live="polite"></span>
+  <button type="button" class="pil-knop" id="pil-vorige" aria-label="Vorige variant">‹</button>
+  <button type="button" class="pil-knop" id="pil-volgende" aria-label="Volgende variant">›</button>
+  <button type="button" class="pil-knop" id="pil-terug">Standaard</button>
+</div>
+
+<script>
+/* ===== Logo: letterbeelden en grid uit 'NNA logo grid.pdf' ===== */
+const GLYF = {"N":{"w":0.567,"d":"M0.377 -0.75C0.38 -0.681 0.383 -0.548 0.383 -0.444C0.384 -0.384 0.387 -0.32 0.392 -0.252L0.391 -0.251C0.38 -0.31 0.367 -0.368 0.351 -0.416C0.308 -0.55 0.251 -0.699 0.238 -0.75H0.045C0.046 -0.653 0.046 -0.534 0.046 -0.375C0.046 -0.215 0.045 -0.099 0.045 0H0.193C0.192 -0.042 0.191 -0.147 0.19 -0.303C0.189 -0.367 0.186 -0.438 0.181 -0.518H0.183C0.196 -0.451 0.211 -0.384 0.231 -0.32C0.277 -0.205 0.327 -0.068 0.348 0H0.522C0.52 -0.096 0.52 -0.209 0.52 -0.376C0.52 -0.535 0.522 -0.69 0.523 -0.75Z","b":[0.045,-0.75,0.523,0.0]},"e":{"w":0.464,"d":"M0.239 -0.522C0.278 -0.522 0.294 -0.496 0.294 -0.41C0.294 -0.388 0.293 -0.371 0.293 -0.357C0.251 -0.356 0.21 -0.356 0.175 -0.357C0.18 -0.495 0.201 -0.522 0.239 -0.522ZM0.358 -0.215C0.332 -0.215 0.309 -0.215 0.291 -0.217C0.291 -0.141 0.28 -0.116 0.24 -0.116C0.195 -0.116 0.176 -0.145 0.174 -0.274C0.201 -0.274 0.236 -0.274 0.274 -0.274C0.326 -0.274 0.385 -0.274 0.431 -0.273C0.433 -0.298 0.435 -0.353 0.435 -0.409C0.435 -0.566 0.391 -0.643 0.241 -0.643C0.098 -0.643 0.023 -0.567 0.023 -0.308C0.023 -0.065 0.094 0.01 0.237 0.01C0.4 0.01 0.437 -0.062 0.433 -0.217C0.412 -0.215 0.387 -0.215 0.358 -0.215Z","b":[0.023,-0.643,0.435,0.01]},"t":{"w":0.353,"d":"M0.014 -0.633C0.015 -0.583 0.015 -0.52 0.014 -0.466L0.057 -0.465C0.056 -0.355 0.054 -0.254 0.054 -0.177C0.054 -0.063 0.096 0.007 0.23 0.007C0.275 0.007 0.303 0.001 0.34 -0.01C0.334 -0.057 0.326 -0.143 0.324 -0.192C0.306 -0.183 0.282 -0.179 0.257 -0.179C0.224 -0.179 0.21 -0.191 0.21 -0.227C0.21 -0.31 0.21 -0.389 0.211 -0.463C0.258 -0.462 0.3 -0.461 0.326 -0.46C0.326 -0.517 0.327 -0.576 0.329 -0.632C0.293 -0.631 0.254 -0.631 0.214 -0.631C0.215 -0.67 0.216 -0.706 0.217 -0.74C0.191 -0.738 0.164 -0.738 0.138 -0.738C0.111 -0.738 0.083 -0.739 0.059 -0.74C0.059 -0.704 0.059 -0.668 0.059 -0.632Z","b":[0.014,-0.74,0.34,0.007]},"w":{"w":0.655,"d":"M0.522 -0.632C0.518 -0.576 0.503 -0.416 0.49 -0.289C0.484 -0.239 0.481 -0.196 0.478 -0.161H0.473C0.471 -0.196 0.467 -0.239 0.462 -0.289C0.448 -0.417 0.432 -0.584 0.429 -0.632C0.404 -0.632 0.371 -0.631 0.345 -0.631C0.322 -0.631 0.279 -0.632 0.256 -0.632C0.252 -0.58 0.233 -0.416 0.219 -0.291C0.214 -0.242 0.209 -0.197 0.206 -0.161H0.201C0.198 -0.197 0.195 -0.241 0.191 -0.29C0.179 -0.419 0.164 -0.587 0.162 -0.632H0.004C0.029 -0.49 0.076 -0.093 0.09 0C0.106 -0.001 0.133 -0.001 0.181 -0.001C0.216 -0.001 0.252 0 0.272 0C0.28 -0.053 0.296 -0.19 0.309 -0.318C0.315 -0.367 0.32 -0.415 0.323 -0.456H0.325C0.329 -0.416 0.333 -0.368 0.338 -0.319C0.35 -0.191 0.364 -0.051 0.37 0C0.387 -0.001 0.424 -0.001 0.473 -0.001C0.51 -0.001 0.541 -0.001 0.565 0C0.577 -0.087 0.626 -0.478 0.651 -0.632Z","b":[0.004,-0.632,0.651,0.0]},"r":{"w":0.339,"d":"M0.167 -0.513C0.168 -0.557 0.169 -0.594 0.171 -0.632H0.04C0.042 -0.544 0.042 -0.454 0.042 -0.323C0.042 -0.185 0.042 -0.089 0.04 0H0.213C0.208 -0.097 0.208 -0.222 0.208 -0.322C0.208 -0.411 0.226 -0.435 0.279 -0.436C0.293 -0.436 0.309 -0.433 0.323 -0.429C0.323 -0.499 0.327 -0.572 0.332 -0.632C0.319 -0.636 0.304 -0.638 0.289 -0.638C0.234 -0.638 0.193 -0.604 0.174 -0.512Z","b":[0.04,-0.638,0.332,0.0]},"k":{"w":0.484,"d":"M0.313 -0.632C0.301 -0.591 0.279 -0.528 0.248 -0.458C0.234 -0.423 0.217 -0.386 0.202 -0.349H0.201V-0.379C0.201 -0.546 0.2 -0.663 0.203 -0.774H0.039C0.041 -0.663 0.041 -0.539 0.041 -0.407C0.041 -0.259 0.041 -0.113 0.039 0H0.203C0.201 -0.085 0.201 -0.164 0.201 -0.265H0.202C0.233 -0.211 0.271 -0.105 0.3 -0.023C0.306 -0.005 0.313 0 0.333 0H0.484C0.44 -0.102 0.403 -0.247 0.337 -0.318C0.399 -0.39 0.449 -0.546 0.481 -0.632Z","b":[0.039,-0.774,0.484,0.0]},"i":{"w":0.244,"d":"M0.216 -0.727C0.216 -0.758 0.2 -0.778 0.123 -0.778C0.044 -0.778 0.028 -0.758 0.028 -0.727C0.028 -0.7 0.042 -0.673 0.123 -0.673C0.202 -0.673 0.216 -0.7 0.216 -0.727ZM0.204 0C0.201 -0.091 0.201 -0.178 0.201 -0.32C0.201 -0.444 0.201 -0.54 0.204 -0.632H0.041C0.042 -0.541 0.043 -0.443 0.043 -0.327C0.043 -0.204 0.043 -0.094 0.041 0Z","b":[0.028,-0.778,0.216,0.0]},"u":{"w":0.515,"d":"M0.313 -0.632C0.313 -0.558 0.314 -0.486 0.314 -0.232C0.314 -0.165 0.286 -0.14 0.249 -0.14C0.214 -0.14 0.201 -0.159 0.201 -0.205C0.201 -0.386 0.201 -0.525 0.203 -0.632H0.039C0.042 -0.565 0.042 -0.498 0.042 -0.416C0.042 -0.337 0.041 -0.275 0.041 -0.147C0.041 -0.038 0.091 0.007 0.172 0.007C0.238 0.007 0.285 -0.02 0.309 -0.084L0.315 -0.083C0.314 -0.055 0.314 -0.032 0.313 0H0.475C0.474 -0.085 0.474 -0.183 0.474 -0.317C0.474 -0.456 0.474 -0.542 0.475 -0.632Z","b":[0.039,-0.632,0.475,0.007]},"o":{"w":0.493,"d":"M0.313 -0.325C0.313 -0.175 0.29 -0.139 0.246 -0.139C0.202 -0.139 0.179 -0.175 0.179 -0.325C0.179 -0.474 0.203 -0.503 0.246 -0.503C0.289 -0.503 0.313 -0.473 0.313 -0.325ZM0.472 -0.329C0.472 -0.571 0.391 -0.643 0.245 -0.643C0.099 -0.643 0.021 -0.571 0.021 -0.329C0.021 -0.086 0.091 0.01 0.245 0.01C0.4 0.01 0.472 -0.086 0.472 -0.329Z","b":[0.021,-0.643,0.472,0.01]},"m":{"w":0.725,"d":"M0.69 0C0.687 -0.061 0.687 -0.132 0.687 -0.206C0.687 -0.298 0.689 -0.381 0.689 -0.5C0.689 -0.592 0.643 -0.64 0.567 -0.64C0.511 -0.64 0.461 -0.615 0.437 -0.542L0.43 -0.543C0.416 -0.606 0.374 -0.64 0.315 -0.64C0.259 -0.64 0.219 -0.613 0.195 -0.547L0.19 -0.548L0.193 -0.632H0.039C0.041 -0.542 0.041 -0.451 0.041 -0.316C0.041 -0.182 0.041 -0.091 0.039 0H0.19C0.189 -0.076 0.188 -0.191 0.188 -0.397C0.188 -0.465 0.215 -0.487 0.249 -0.487C0.281 -0.487 0.294 -0.467 0.294 -0.424C0.294 -0.222 0.294 -0.106 0.291 0H0.44C0.437 -0.08 0.437 -0.17 0.437 -0.397C0.437 -0.465 0.463 -0.487 0.496 -0.487C0.528 -0.487 0.542 -0.468 0.542 -0.424C0.542 -0.244 0.542 -0.105 0.539 0Z","b":[0.039,-0.64,0.69,0.0]},"s":{"w":0.446,"d":"M0.281 -0.427C0.294 -0.428 0.316 -0.428 0.338 -0.428C0.367 -0.428 0.398 -0.427 0.418 -0.425C0.419 -0.444 0.42 -0.461 0.42 -0.477C0.42 -0.592 0.372 -0.642 0.224 -0.642C0.086 -0.642 0.021 -0.595 0.021 -0.472C0.021 -0.365 0.057 -0.302 0.176 -0.261C0.245 -0.237 0.267 -0.208 0.267 -0.167C0.267 -0.129 0.253 -0.114 0.216 -0.114C0.173 -0.114 0.159 -0.133 0.159 -0.178C0.159 -0.187 0.16 -0.198 0.16 -0.211C0.145 -0.21 0.123 -0.209 0.101 -0.209C0.067 -0.209 0.042 -0.211 0.023 -0.212C0.023 -0.198 0.022 -0.181 0.022 -0.161C0.022 -0.049 0.066 0.01 0.223 0.01C0.367 0.01 0.425 -0.046 0.425 -0.168C0.425 -0.28 0.38 -0.336 0.266 -0.378C0.193 -0.405 0.179 -0.433 0.179 -0.473C0.179 -0.507 0.193 -0.521 0.23 -0.521C0.269 -0.521 0.281 -0.504 0.281 -0.461Z","b":[0.021,-0.642,0.425,0.01]},"A":{"w":0.551,"d":"M0.269 -0.292C0.253 -0.292 0.233 -0.292 0.211 -0.293C0.222 -0.372 0.234 -0.454 0.244 -0.526C0.253 -0.574 0.261 -0.624 0.266 -0.661H0.272C0.277 -0.624 0.284 -0.574 0.293 -0.527C0.304 -0.455 0.315 -0.372 0.326 -0.292ZM0.545 0C0.504 -0.189 0.426 -0.655 0.409 -0.75H0.137C0.122 -0.657 0.044 -0.187 0.006 0H0.176C0.178 -0.032 0.185 -0.091 0.194 -0.162H0.269H0.342C0.351 -0.088 0.357 -0.029 0.359 0Z","b":[0.006,-0.75,0.545,0.0]},"d":{"w":0.506,"d":"M0.306 -0.241C0.306 -0.165 0.277 -0.136 0.24 -0.136C0.202 -0.136 0.18 -0.166 0.18 -0.316C0.18 -0.474 0.203 -0.504 0.249 -0.504C0.271 -0.504 0.29 -0.5 0.306 -0.492ZM0.303 -0.774C0.304 -0.737 0.304 -0.702 0.304 -0.66C0.304 -0.626 0.305 -0.6 0.306 -0.567H0.301C0.278 -0.618 0.239 -0.64 0.185 -0.64C0.093 -0.64 0.023 -0.571 0.023 -0.314C0.023 -0.062 0.08 0.008 0.174 0.008C0.246 0.008 0.282 -0.041 0.299 -0.096H0.305C0.305 -0.083 0.304 -0.07 0.304 -0.056C0.304 -0.035 0.304 -0.018 0.303 0H0.467C0.465 -0.096 0.465 -0.202 0.465 -0.353C0.465 -0.54 0.465 -0.662 0.467 -0.774Z","b":[0.023,-0.774,0.467,0.008]},"a":{"w":0.474,"d":"M0.277 -0.237C0.277 -0.154 0.256 -0.118 0.216 -0.118C0.183 -0.118 0.171 -0.132 0.171 -0.201C0.171 -0.266 0.19 -0.281 0.233 -0.281C0.248 -0.281 0.263 -0.28 0.277 -0.278ZM0.283 -0.089C0.282 -0.071 0.281 -0.052 0.281 -0.037C0.281 -0.004 0.286 0 0.314 0H0.443C0.435 -0.025 0.432 -0.12 0.432 -0.192C0.432 -0.282 0.434 -0.353 0.434 -0.456C0.434 -0.577 0.375 -0.641 0.235 -0.641C0.082 -0.641 0.026 -0.558 0.035 -0.395C0.054 -0.397 0.084 -0.398 0.114 -0.398C0.138 -0.398 0.162 -0.398 0.18 -0.396C0.176 -0.48 0.196 -0.501 0.231 -0.501C0.265 -0.501 0.279 -0.478 0.279 -0.438C0.279 -0.41 0.279 -0.38 0.278 -0.351C0.259 -0.355 0.235 -0.357 0.209 -0.357C0.082 -0.357 0.022 -0.312 0.022 -0.173C0.022 -0.028 0.068 0.006 0.151 0.006C0.218 0.006 0.262 -0.024 0.278 -0.089Z","b":[0.022,-0.641,0.443,0.006]}};
+const WOORD = {
+  netwerk: ['Netwerk', { 1: -0.9, 2: -9.1, 3: 3.9, 5: 1.3 }],
+  nieuwkomers: ['Nieuwkomers', { 1: 4.1, 2: 0.7, 3: -0.8, 4: -1.4, 5: 13, 6: 0.5, 7: -2.8, 9: -4.7 }],
+  amsterdam: ['Amsterdam', { 0: -1.8, 1: -4.4, 2: -1.5, 3: 7.8, 4: 0.9, 7: 2.6 }],
+  nna: ['NNA', { 1: -2 }],
+};
+/* Maten in em (1 em = lettergrootte), y naar beneden, nulpunt = basislijn links van Netwerk */
+const GRID = {
+  lijn: 0.1111,             // lijndikte
+  r: 0.104,                 // straal van de margecirkel
+  kap: 0.75,                // hoofdletterhoogte
+  rijN: 1.005, rijA: 2.022, // basislijnen van Nieuwkomers en Amsterdam
+  amstX: 0.054,
+  nieuwRechts: 6.8404,      // rechterrand van Nieuwkomers in de compacte vorm
+};
+const NS = 'http://www.w3.org/2000/svg';
+const clamp = (min, v, max) => Math.max(min, Math.min(max, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+/* Klein logo, iets ruimere letterspatie, zoals in het grid: -0,004 em bij 18 px, -0,016 em vanaf 60 px */
+const spatie = s => -0.004 - 0.012 * clamp(0, (s - 18) / 42, 1);
+/* Grootste lettergrootte van het open logo: op desktop 8,5% van de breedte, op de telefoon relatief groter (tot 13%) */
+const standaardMax = W => { const f = 0.13 - 0.045 * clamp(0, (W - 400) / 600, 1); return Math.max(18, Math.min(120, f * W)); };
+
+function mk(tag, attrs, ouder) {
+  const e = document.createElementNS(NS, tag);
+  Object.entries(attrs || {}).forEach(([k, v]) => e.setAttribute(k, v));
+  if (ouder) ouder.appendChild(e);
+  return e;
+}
+function woordMaat(k, tc) {
+  const [tekst, kern] = WOORD[k];
+  let x = 0; const xs = [];
+  [...tekst].forEach((ch, i) => { xs.push(x); x += GLYF[ch].w + tc - (kern[i] || 0) / 1000; });
+  return { xs, links: GLYF[tekst[0]].b[0], rechts: xs[xs.length - 1] + GLYF[tekst[tekst.length - 1]].b[2] };
+}
+/* Hoekpunten van een lijn met platte uiteinden, voor de buitenmaat */
+function hoeken([x1, y1, x2, y2], half) {
+  const len = Math.hypot(x2 - x1, y2 - y1) || 1;
+  const px = -(y2 - y1) / len * half, py = (x2 - x1) / len * half;
+  return [[x1 + px, y1 + py], [x1 - px, y1 - py], [x2 + px, y2 + py], [x2 - px, y2 - py]];
+}
+function buitenmaat(lijnen, x0, y0, x1, y1) {
+  lijnen.forEach(l => hoeken(l, GRID.lijn / 2).forEach(([x, y]) => {
+    x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+  }));
+  return [x0, y0, x1, y1];
+}
+
+/* Het lange logo. dx/dy = extra ruimte (em) als het vak breder of hoger is dan de compacte vorm.
+   Elk lijnuiteinde ligt vast ten opzichte van zijn woord, zodat de marge altijd klopt. */
+function geometrie(tc, dx = 0, dy = 0) {
+  const N = woordMaat('netwerk', tc), K = woordMaat('nieuwkomers', tc), A = woordMaat('amsterdam', tc + 0.001);
+  const ay = GRID.rijA + dy, ky = ay * (GRID.rijN / GRID.rijA);
+  const kR = GRID.nieuwRechts + dx, kx = kR - K.rechts;
+  const nR = N.rechts, aR = GRID.amstX + A.rechts;
+  const lijnen = {
+    boven: [nR + 0.2037, -0.6015, kR + 0.004, ky - 0.8857],
+    onder: [kR - 0.004, ky + 0.2447, aR + 0.199, ay - 0.03],
+    rug: [0.1005, 0.2071, 0.1005, ay - 0.9591],
+  };
+  const cirkels = [[nR + 0.0968, -0.6016], [kR - 0.1038, ky - 0.7395], [kR - 0.1038, ky + 0.1091],
+    [aR + 0.0992, ay + 0.0041], [0.1068, 0.1002], [GRID.amstX + 0.0528, ay - 0.8523]];
+  const banden = [[0, ky - GRID.kap], [ky, ay - GRID.kap]];
+  const vak = buitenmaat(Object.values(lijnen), Math.min(N.links, GRID.amstX + A.links), -0.778, kR, ay + 0.012);
+  return { pos: { netwerk: [0, 0], nieuwkomers: [kx, ky], amsterdam: [GRID.amstX, ay] },
+    xs: { netwerk: N.xs, nieuwkomers: K.xs, amsterdam: A.xs }, lijnen, cirkels, banden, vak };
+}
+const natuur = tc => { const v = geometrie(tc).vak; return { w: v[2] - v[0], h: v[3] - v[1] }; };
+/* Grootste lettergrootte (px per em) waarbij de compacte vorm in W × H past, nooit samengedrukt */
+function passend(W, H, sMax) {
+  let s = sMax;
+  for (let i = 0; i < 3; i++) { const n = natuur(spatie(s)); s = Math.min(sMax, W / n.w, H / n.h); }
+  return Math.max(1, s);
+}
+
+function maakLogo(el) {
+  const svg = mk('svg', { 'aria-hidden': 'true' });
+  const inhoud = mk('g', {}, svg);
+  const lijn = {};
+  ['rug', 'boven', 'onder'].forEach(k => { lijn[k] = mk('line', { 'stroke-width': GRID.lijn }, inhoud); });
+  const woord = {}, letters = {};
+  ['netwerk', 'nieuwkomers', 'amsterdam'].forEach(k => {
+    woord[k] = mk('g', {}, inhoud);
+    letters[k] = [...WOORD[k][0]].map(ch => mk('path', { class: 'g', d: GLYF[ch].d }, woord[k]));
+  });
+  const rooster = mk('g', { class: 'grid' }, inhoud);
+  const banden = [0, 1].map(() => mk('rect', {}, rooster));
+  const cirkels = [0, 1, 2, 3, 4, 5].map(() => mk('circle', { r: GRID.r }, rooster));
+  el.appendChild(svg);
+
+  function zet(W, H, s) {
+    const tc = spatie(s), n = natuur(tc);
+    const g = geometrie(tc, Math.max(0, W / s - n.w), Math.max(0, H / s - n.h));
+    el.style.width = W + 'px'; el.style.height = H + 'px';
+    svg.setAttribute('width', Math.max(1, W)); svg.setAttribute('height', Math.max(1, H));
+    svg.setAttribute('viewBox', `0 0 ${Math.max(1, W)} ${Math.max(1, H)}`);
+    inhoud.setAttribute('transform', `translate(${-g.vak[0] * s} ${-g.vak[1] * s}) scale(${s})`);
+    Object.keys(woord).forEach(k => {
+      woord[k].setAttribute('transform', `translate(${g.pos[k][0]} ${g.pos[k][1]})`);
+      letters[k].forEach((p, i) => p.setAttribute('transform', `translate(${g.xs[k][i]} 0)`));
+    });
+    Object.entries(g.lijnen).forEach(([k, [x1, y1, x2, y2]]) => {
+      const l = lijn[k]; l.setAttribute('x1', x1); l.setAttribute('y1', y1); l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+    });
+    g.banden.forEach(([a, b], i) => {
+      const r = banden[i]; r.setAttribute('x', g.vak[0]); r.setAttribute('y', a);
+      r.setAttribute('width', g.vak[2] - g.vak[0]); r.setAttribute('height', Math.max(0, b - a));
+    });
+    g.cirkels.forEach(([x, y], i) => { cirkels[i].setAttribute('cx', x); cirkels[i].setAttribute('cy', y); });
+  }
+  return { zet, past(W, H, sMax = Infinity) { const s = passend(W, H, sMax); zet(W, H, s); return s; } };
+}
+
+/* Korte vorm |NNA> uit het grid (pagina 4) */
+function maakKort(el, hoogte) {
+  const svg = mk('svg', { 'aria-hidden': 'true' });
+  const inhoud = mk('g', {}, svg);
+  const s0 = hoogte / 0.856, tc = spatie(s0 * 0.75 / 0.75);
+  const M = woordMaat('nna', tc);
+  const rechts = M.rechts + 0.0578;
+  const lijnen = [[-0.1673, -0.7976, -0.1673, 0.0582], [rechts, -0.6889, rechts + 0.3645, -0.4457], [rechts, -0.0773, rechts + 0.3645, -0.3205]];
+  lijnen.forEach(([x1, y1, x2, y2]) => mk('line', { x1, y1, x2, y2, 'stroke-width': GRID.lijn }, inhoud));
+  const w = mk('g', {}, inhoud);
+  [...'NNA'].forEach((ch, i) => mk('path', { class: 'g', d: GLYF[ch].d, transform: `translate(${M.xs[i]} 0)` }, w));
+  const v = buitenmaat(lijnen, M.links, -0.75, M.rechts, 0);
+  const s = hoogte / (v[3] - v[1]), W = (v[2] - v[0]) * s;
+  svg.setAttribute('width', W); svg.setAttribute('height', hoogte); svg.setAttribute('viewBox', `0 0 ${W} ${hoogte}`);
+  inhoud.setAttribute('transform', `translate(${-v[0] * s} ${-v[1] * s}) scale(${s})`);
+  el.appendChild(svg);
+}
+
+/* ===== Opening: groot logo dat naar de hoek schuift ===== */
+const laag = document.getElementById('logo-laag');
+const ruimte = document.getElementById('hero-ruimte');
+const kopbalk = document.getElementById('kopbalk');
+const veiligBoven = document.getElementById('veilig-boven');
+const hoofdLogo = maakLogo(laag);
+const KLEIN_H = 52;
+const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+function tekenOpening() {
+  const r = ruimte.getBoundingClientRect();
+  const grootH = r.height;
+  const p = ease(clamp(0, window.scrollY / Math.max(1, grootH * 0.7), 1));
+  const top = veiligBoven.offsetHeight || 0;
+  const kopH = kopbalk.offsetHeight;
+  // Groot: de uitgerekte vorm bovenaan de pagina. Klein: precies de compacte vorm, vast in de kopbalk.
+  const sG = passend(r.width, grootH, standaardMax(r.width));
+  const sK = passend(1e5, KLEIN_H, 1e5);
+  const WK = natuur(spatie(sK)).w * sK;
+  const x = lerp(r.left, r.left, p), y = lerp(r.top, top + (kopH - KLEIN_H) / 2, p);
+  const W = lerp(r.width, WK, p), H = lerp(grootH, KLEIN_H, p);
+  const s = Math.exp(lerp(Math.log(sG), Math.log(sK), p));
+  laag.style.transform = `translate(${x}px, ${y}px)`;
+  hoofdLogo.zet(W, H, s);
+  const zicht = clamp(0, (p - 0.55) / 0.45, 1);
+  kopbalk.style.opacity = zicht;
+  kopbalk.classList.toggle('zichtbaar', zicht > 0.5);
+}
+let bezig = false;
+function plan() { if (bezig) return; bezig = true; requestAnimationFrame(() => { bezig = false; tekenOpening(); }); }
+window.addEventListener('scroll', plan, { passive: true });
+window.addEventListener('resize', plan);
+
+/* ===== Demo: meeschalend logo ===== */
+const doos = document.getElementById('demo-doos');
+const veld = document.getElementById('demo-veld');
+const demoLogo = maakLogo(doos);
+const schuifB = document.getElementById('demo-b'), schuifH = document.getElementById('demo-h');
+const outB = document.getElementById('out-b'), outH = document.getElementById('out-h');
+const maat = document.getElementById('demo-maat');
+const gridKnop = document.getElementById('demo-grid');
+function tekenDemo() {
+  const maxB = Math.max(120, veld.clientWidth - 56 - 28);
+  const W = Math.min(+schuifB.value, maxB), H = +schuifH.value;
+  const s = demoLogo.past(W, H);
+  outB.textContent = Math.round(W) + ' px';
+  outH.textContent = H + ' px';
+  const n = natuur(spatie(s));
+  const vorm = (W / s - n.w < 0.05 && H / s - n.h < 0.05) ? 'compacte vorm' : 'uitgerekt';
+  maat.textContent = `Vak ${Math.round(W)} × ${H} px · ${vorm} · hoofdletter ${Math.round(s * GRID.kap)} px · lijn ${(s * GRID.lijn).toFixed(1)} px · marge ${(s * GRID.r * 2).toFixed(1)} px`;
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.b === +schuifB.value && +c.dataset.h === H)));
+}
+schuifB.addEventListener('input', tekenDemo);
+schuifH.addEventListener('input', tekenDemo);
+gridKnop.addEventListener('change', () => doos.classList.toggle('met-grid', gridKnop.checked));
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  schuifB.value = c.dataset.b; schuifH.value = c.dataset.h; tekenDemo();
+}));
+
+/* Varianten op kleur en de korte vorm */
+const varianten = [...document.querySelectorAll('[data-variant]')].map(el => ({ el, logo: maakLogo(el) }));
+function tekenVarianten() { varianten.forEach(v => v.logo.past(v.el.parentElement.clientWidth - 48, 150)); }
+document.querySelectorAll('[data-kort]').forEach(el => maakKort(el, +el.dataset.kort));
+
+const ro = new ResizeObserver(() => { tekenDemo(); tekenVarianten(); plan(); });
+ro.observe(veld);
+ro.observe(document.body);
+
+/* ===== Kleuren ===== */
+const STANDAARD = 12;
+/* Kleurvoorstellen uit '261103 nna kleur_v1.pdf', pagina 4 t/m 28: woorden, lijnen en de vier vlakken */
+/* Namen naar de woordkleur en de lijnkleur */
+const KLEURNAAM = {
+  4: 'Zwart & staalblauw', 5: 'Violet & limoen', 6: 'Koraal & mint', 7: 'Kobalt & zon', 8: 'Smaragd & zon',
+  9: 'Grijsblauw & mos', 10: 'Helderblauw & roze', 11: 'Helderblauw & mos', 12: 'Indigo & zand', 13: 'Zeegroen & lavendel',
+  14: 'Bordeaux & ijsblauw · donker', 15: 'Bordeaux & roze · donker', 16: 'Bordeaux & goud · donker', 17: 'Framboos & salie',
+  18: 'Kastanje & poederblauw', 19: 'Hemelsblauw & flamingo', 20: 'Flamingo & citroen', 21: 'Grasgroen & zon',
+  22: 'Nachtblauw & grasgroen', 23: 'Grasgroen & koraal', 24: 'Turkoois & lila', 25: 'Zalm & lila',
+  26: 'Bordeaux & roze · fris', 27: 'Bordeaux & ijsblauw · fris', 28: 'Bordeaux & goud · fris',
+};
+/* Roepnamen, zoals Adobe Color paletten noemt */
+const ROEPNAAM = {
+  12: 'Welkom', 4: 'Klassiek', 5: 'Festival', 6: 'Zomerterras', 7: 'Zonnig', 8: 'Vondelpark', 9: 'Ochtendmist',
+  10: 'Bubblegum', 11: 'Fris', 13: 'Lente', 14: 'Winteravond', 15: 'Fluweel', 16: 'Feest', 17: 'Moestuin',
+  18: 'Theetijd', 19: 'Happy', 20: 'Limonade', 21: 'Picknick', 22: 'Avondmarkt', 23: 'Watermeloen',
+  24: 'Zeebries', 25: 'Zonsondergang', 26: 'Bloemenmarkt', 27: 'Winterlicht', 28: 'Gastvrij',
+};
+const slugVan = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const VARIANTEN = [{"p":4,"woord":"#000000","lijn":"#465A9E","vlakken":["#000000","#465A9E","#8CD2F4","#FFFF00"]},{"p":5,"woord":"#7D39EB","lijn":"#DCF671","vlakken":["#7D39EB","#C6FF33","#8CD2F4","#FFFF00"]},{"p":6,"woord":"#FC4863","lijn":"#75E9D4","vlakken":["#FC4863","#75E9D4","#79ED82","#00A267"]},{"p":7,"woord":"#004AAB","lijn":"#FDDF59","vlakken":["#004AAB","#FDDF59","#7EDA55","#00A267"]},{"p":8,"woord":"#00A267","lijn":"#FDDF59","vlakken":["#7EDA55","#004AAB","#FDDF59","#00A267"]},{"p":9,"woord":"#83BEC6","lijn":"#87BD5D","vlakken":["#83BEC6","#87BD5D","#FDDF59","#00A267"]},{"p":10,"woord":"#416FF6","lijn":"#EE868D","vlakken":["#416FF6","#EE868D","#F8B236","#509990"]},{"p":11,"woord":"#416FF6","lijn":"#87BD5D","vlakken":["#416FF6","#87BD5D","#EE868D","#F6ADEA"]},{"p":12,"woord":"#6F66F7","lijn":"#F6D089","vlakken":["#6F66F7","#F6D089","#EE868D","#509990"]},{"p":13,"woord":"#2F9A92","lijn":"#8D85FF","vlakken":["#2F9A92","#8D85FF","#A9A3FF","#FDC40C"]},{"p":14,"woord":"#7D2133","lijn":"#B0D4D4","vlakken":["#7D2133","#B0D4D4","#1F0062","#2A6552"]},{"p":15,"woord":"#7D2133","lijn":"#F6ADEA","vlakken":["#7D2133","#F6ADEA","#1F0062","#2A6552"]},{"p":16,"woord":"#7D2133","lijn":"#FDC40C","vlakken":["#7D2133","#FDC40C","#1F0062","#2A6552"]},{"p":17,"woord":"#86194D","lijn":"#69AA7E","vlakken":["#86194D","#2A7954","#AD4D7B","#69AA7E"]},{"p":18,"woord":"#430716","lijn":"#CBD9FC","vlakken":["#430716","#CBD9FC","#FF5E7C","#87BD5D"]},{"p":19,"woord":"#5499E8","lijn":"#FF5E7C","vlakken":["#5499E8","#FF5E7C","#FBE812","#A8CE84"]},{"p":20,"woord":"#FF5E7C","lijn":"#FBE812","vlakken":["#FF5E7C","#FBE812","#5499E8","#A8CE84"]},{"p":21,"woord":"#22C46F","lijn":"#FDD540","vlakken":["#22C46F","#78AAFF","#FDD540","#FB6F7A"]},{"p":22,"woord":"#01156B","lijn":"#22C46F","vlakken":["#01156B","#22C46F","#FDD540","#FB6F7A"]},{"p":23,"woord":"#22C46F","lijn":"#FB6F7A","vlakken":["#22C46F","#FB6F7A","#FDD540","#002F01"]},{"p":24,"woord":"#4EACAB","lijn":"#BE7CF7","vlakken":["#4EACAB","#BE7CF7","#ED6E65","#F2A9BC"]},{"p":25,"woord":"#ED6E65","lijn":"#BE7CF7","vlakken":["#ED6E65","#BE7CF7","#4EACAB","#F2A9BC"]},{"p":26,"woord":"#7D2133","lijn":"#F6ADEA","vlakken":["#7D2133","#F6ADEA","#4EACAB","#F2A9BC"]},{"p":27,"woord":"#7D2133","lijn":"#B0D4D4","vlakken":["#7D2133","#B0D4D4","#4EACAB","#F2A9BC"]},{"p":28,"woord":"#7D2133","lijn":"#FDC40C","vlakken":["#7D2133","#FDC40C","#4EACAB","#FFF5D7"]}];
+VARIANTEN.forEach(v => { v.naam = ROEPNAAM[v.p]; v.kleuren = KLEURNAAM[v.p]; v.slug = slugVan(v.naam); });
+/* De huidige keuze eerst */
+VARIANTEN.sort((a, b) => (b.p === STANDAARD) - (a.p === STANDAARD) || a.p - b.p);
+const ICOON = {
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>',
+  let:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.1"/></svg>',
+  fout:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M15 9l-6 6M9 9l6 6"/></svg>',
+  info:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.1"/></svg>',
+  kopie: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>',
+};
+
+function lum(hex) {
+  const n = hex.replace('#', '');
+  const [r, g, b] = [0, 2, 4].map(i => parseInt(n.slice(i, i + 2), 16) / 255)
+    .map(c => c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+function contrast(a, b) { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); }
+const fmt = n => n.toFixed(1).replace('.', ',');
+const niveau = r => r >= 7 ? 'AAA' : r >= 4.5 ? 'AA' : r >= 3 ? 'Groot' : 'Nee';
+const rgb = hex => [0, 2, 4].map(i => parseInt(hex.slice(1 + i, 3 + i), 16)).join(', ');
+function mix(a, b, t) {
+  const p = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const [x, y] = [p(a), p(b)];
+  return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join('').toUpperCase();
+}
+/* Donkere versie van de hoofdkleur voor kleine tekst (7 : 1 op wit) */
+function diepVan(hex) {
+  if (contrast(hex, '#FFFFFF') >= 7) return hex;
+  for (let t = 0.04; t <= 1; t += 0.04) { const c = mix(hex, '#0E0C24', t); if (contrast(c, '#FFFFFF') >= 7) return c; }
+  return '#0E0C24';
+}
+/* Tekst op een vlak: wit zoals in het ontwerp, tenzij het vlak daar te licht voor is */
+const opVlak = (c, inkt) => contrast('#FFFFFF', c) >= 2.2 ? '#FFFFFF' : inkt;
+
+function palet(v) {
+  if (v.p === STANDAARD) return { hoofd: '#6F66F7', lijn: '#F6D089', steun1: '#EE868D', steun2: '#509990', diep: '#4F49B5', wit: '#FFFFFF', licht: '#ECE9FE', lijnlicht: '#FBE9C6', inkt: '#1C1A45', rand: '#E3E0F5', zacht: '#5F5B99' };
+  const rest = v.vlakken.filter(c => c !== v.woord && c !== v.lijn);
+  const diep = diepVan(v.woord);
+  return { hoofd: v.woord, lijn: v.lijn, steun1: rest[0], steun2: rest[1] || rest[0], diep, wit: '#FFFFFF',
+    licht: mix(v.woord, '#FFFFFF', 0.87), lijnlicht: mix(v.lijn, '#FFFFFF', 0.53), inkt: mix(v.woord, '#0B0A1A', 0.8),
+    rand: mix(v.woord, '#FFFFFF', 0.82), zacht: mix(diep, '#FFFFFF', 0.12) };
+}
+const NAMEN = { hoofd: 'Hoofdkleur', lijn: 'Lijnkleur', steun1: 'Steunkleur 1', steun2: 'Steunkleur 2', diep: 'Hoofdkleur diep', wit: 'Wit', licht: 'Licht vlak', lijnlicht: 'Lijnkleur licht', inkt: 'Inkt', rand: 'Rand' };
+const NAMEN_STANDAARD = { ...NAMEN, hoofd: 'Indigo', lijn: 'Zand', steun1: 'Roze', steun2: 'Teal', diep: 'Indigo diep', licht: 'Lila', lijnlicht: 'Zand licht' };
+const SLUG = { hoofd: 'hoofd', lijn: 'lijn', steun1: 'steun-1', steun2: 'steun-2', diep: 'hoofd-diep', wit: 'wit', licht: 'licht', lijnlicht: 'lijn-licht', inkt: 'inkt', rand: 'rand' };
+const SLUG_STANDAARD = { ...SLUG, hoofd: 'indigo', lijn: 'zand', steun1: 'roze', steun2: 'teal', diep: 'indigo-diep', licht: 'lila', lijnlicht: 'zand-licht' };
+const ROL = {
+  hoofd: 'De hoofdkleur. De woorden van het logo, koppen, knoppen en grote banden.',
+  lijn: 'De lijnen van het logo die door de pagina lopen, en hooguit één licht vlak. Als tekst of knop komt deze kleur niet goed uit.',
+  steun1: 'Steunkleur voor één band, zoals de cijfers, met witte typografie.',
+  steun2: 'Steunkleur voor één band, zoals de partners.',
+  diep: 'Lopende en kleine tekst, knoppen', wit: 'Achtergrond van elke pagina', licht: 'Informatie, rustige vlakken',
+  lijnlicht: 'Hooguit één citaatblok', inkt: 'Code en heel kleine tekst', rand: 'Lijnen en kaartranden',
+};
+const ROL_STANDAARD = { ...ROL, hoofd: 'De hoofdkleur. Koppen, knoppen, grote banden en het logo. Voor kleine tekst op wit net te licht (4,3 : 1).' };
+const COMBI = [
+  ['diep', 'wit'], ['hoofd', 'wit'], ['wit', 'hoofd'], ['wit', 'diep'],
+  ['inkt', 'steun1'], ['wit', 'steun1'], ['inkt', 'steun2'], ['wit', 'steun2'],
+  ['diep', 'licht'], ['diep', 'lijnlicht'], ['lijn', 'wit'], ['lijn', 'hoofd'],
+];
+function besteTekst(hex, inkt) {
+  const a = contrast(hex, inkt), b = contrast(hex, '#FFFFFF');
+  return a >= b ? { hex: inkt, naam: 'Inkt', r: a } : { hex: '#FFFFFF', naam: 'Wit', r: b };
+}
+const kopieKnop = k => `<button type="button" class="kopieer" data-hex="${k.hex}" aria-label="Kopieer ${k.naam} ${k.hex}">${ICOON.kopie}${k.hex}</button>`;
+
+function tekenKleuren(v) {
+  const P = palet(v), st = v.p === STANDAARD;
+  const naam = st ? NAMEN_STANDAARD : NAMEN, rol = st ? ROL_STANDAARD : ROL, slug = st ? SLUG_STANDAARD : SLUG;
+  const K = k => ({ naam: naam[k], hex: P[k], rol: rol[k] });
+  document.getElementById('kern').innerHTML = ['hoofd', 'lijn', 'steun1', 'steun2'].map(k => {
+    const c = K(k), t = besteTekst(c.hex, P.inkt);
+    return `<article class="kaart">
+      <div class="staal" style="--c:${c.hex};--t:${t.hex}"><span class="aa">Aa</span></div>
+      <div class="kaart-tekst"><h3>${c.naam}</h3><p>${c.rol}</p>
+        <div class="codes">${kopieKnop(c)}<span>RGB ${rgb(c.hex)}</span><span>${t.naam}-tekst ${fmt(t.r)}:1 ${niveau(t.r)}</span></div></div>
+    </article>`;
+  }).join('');
+  document.getElementById('steun').innerHTML = ['diep', 'wit', 'licht', 'lijnlicht', 'inkt', 'rand'].map(k => {
+    const c = K(k);
+    return `<div class="mini-kaart"><div class="vlak" style="--c:${c.hex}"></div><b>${c.naam}</b><small>${c.rol}</small>${kopieKnop(c)}</div>`;
+  }).join('');
+  document.getElementById('combi').innerHTML = COMBI.map(([t, b]) => {
+    const T = K(t), B = K(b), r = contrast(T.hex, B.hex), n = niveau(r);
+    const cls = n === 'Nee' ? 'nee' : n === 'Groot' ? 'matig' : 'goed';
+    const uitleg = { AAA: 'AAA · uitstekend', AA: 'AA · goed voor tekst', Groot: 'Alleen grote koppen', Nee: 'Niet voor tekst' }[n];
+    return `<tr>
+      <td><span class="proef" style="background:${B.hex};color:${T.hex}">Welkom</span></td>
+      <td><span class="mini"><i style="--c:${T.hex}"></i>${T.naam} <code>${T.hex}</code></span></td>
+      <td><span class="mini"><i style="--c:${B.hex}"></i>${B.naam} <code>${B.hex}</code></span></td>
+      <td class="num">${fmt(r)} : 1</td>
+      <td><span class="oordeel ${cls}">${uitleg}</span></td></tr>`;
+  }).join('');
+  const regel = k => `  --nna-${slug[k]}: ${P[k]};`;
+  document.getElementById('css-code').textContent = `:root {
+  /* ${v.naam} · ${v.kleuren.toLowerCase()} */
+${['hoofd', 'lijn', 'steun1', 'steun2'].map(regel).join('\n')}
+
+  /* Aanvullend */
+${['diep', 'wit', 'licht', 'lijnlicht', 'inkt', 'rand'].map(regel).join('\n')}
+
+  /* Betekenis */
+  --nna-gelukt: #1B7346;
+  --nna-let-op: #8A5A00;
+  --nna-fout: #B42335;
+  --nna-info: ${P.diep};
+}
+
+body { background: var(--nna-wit); color: var(--nna-${slug.diep}); }
+h1, h2 { color: var(--nna-${slug.hoofd}); }
+.band { background: var(--nna-${slug.hoofd}); color: ${opVlak(P.hoofd, P.inkt) === '#FFFFFF' ? 'var(--nna-wit)' : 'var(--nna-inkt)'}; }
+.band-cijfers { background: var(--nna-${slug.steun1}); color: ${opVlak(P.steun1, P.inkt) === '#FFFFFF' ? 'var(--nna-wit)' : 'var(--nna-inkt)'}; }
+.band-partners { background: var(--nna-${slug.steun2}); }
+.lijn { border-color: var(--nna-${slug.lijn}); }
+.citaat { background: var(--nna-${slug.lijnlicht}); color: var(--nna-${slug.diep}); }
+.logo path { fill: var(--nna-${slug.hoofd}); }
+.logo line { stroke: var(--nna-${slug.lijn}); }`;
+}
+
+/* ===== Kleurvoorstellen: kiezen en op de hele pagina bekijken ===== */
+const raster = document.getElementById('varianten-raster');
+const pil = document.getElementById('variant-pil');
+const pilNaam = document.getElementById('pil-naam');
+let huidig = STANDAARD;
+raster.innerHTML = VARIANTEN.map(v => {
+  const P = palet(v);
+  const vlakken = v.vlakken.map((c, i) => `<i style="--c:${c};--f:${i < 2 ? 2 : 1}"></i>`).join('');
+  return `<button type="button" class="vk" data-p="${v.p}" aria-pressed="false">
+    <span class="vk-logo-vak"><span class="vk-logo nna-logo" style="--logo-tekst:${v.woord};--logo-lijn:${v.lijn}" aria-hidden="true"></span></span>
+    <span class="vk-vlakken" aria-hidden="true">${vlakken}</span>
+    <span class="vk-naam">${v.naam}${v.p === STANDAARD ? ' <em>huidige keuze</em>' : ''}</span>
+    <span class="vk-kleuren">${v.kleuren}</span>
+    <span class="vk-codes">${[v.woord, v.lijn, P.steun1, P.steun2].join(' · ')}</span>
+  </button>`;
+}).join('');
+const kaartLogos = [...raster.querySelectorAll('.vk')].map(k => ({ k, logo: maakLogo(k.querySelector('.vk-logo')) }));
+function tekenKaartLogos() { kaartLogos.forEach(({ k, logo }) => logo.past(Math.max(120, k.clientWidth - 34), 96)); }
+new ResizeObserver(tekenKaartLogos).observe(raster);
+
+function zetVariant(p) {
+  const v = VARIANTEN.find(x => x.p === p) || VARIANTEN.find(x => x.p === STANDAARD);
+  const P = palet(v), r = document.documentElement.style;
+  const vars = { '--indigo': P.hoofd, '--zand': P.lijn, '--roze': P.steun1, '--teal': P.steun2, '--diep': P.diep, '--inkt': P.inkt,
+    '--indigolicht': P.licht, '--zandlicht': P.lijnlicht, '--rand': P.rand, '--zacht': P.zacht, '--info': P.diep, '--info-bg': P.licht,
+    '--op-hoofd': opVlak(P.hoofd, P.inkt), '--op-steun1': opVlak(P.steun1, P.inkt), '--op-steun2': opVlak(P.steun2, P.inkt) };
+  Object.entries(vars).forEach(([k, w]) => v.p === STANDAARD ? r.removeProperty(k) : r.setProperty(k, w));
+  huidig = v.p;
+  tekenKleuren(v);
+  raster.querySelectorAll('.vk').forEach(k => k.setAttribute('aria-pressed', String(+k.dataset.p === v.p)));
+  pil.hidden = v.p === STANDAARD;
+  pilNaam.textContent = v.naam;
+  try { history.replaceState(null, '', v.p === STANDAARD ? location.pathname + location.search : '#' + v.slug); } catch (e) {}
+}
+raster.addEventListener('click', e => { const k = e.target.closest('.vk'); if (k) zetVariant(+k.dataset.p); });
+function stap(d) { const i = VARIANTEN.findIndex(x => x.p === huidig); zetVariant(VARIANTEN[(i + d + VARIANTEN.length) % VARIANTEN.length].p); }
+document.getElementById('pil-vorige').addEventListener('click', () => stap(-1));
+document.getElementById('pil-volgende').addEventListener('click', () => stap(1));
+document.getElementById('pil-terug').addEventListener('click', () => zetVariant(STANDAARD));
+/* Link: #bordeaux-goud-donker, of het oude #variant-16 */
+function uitHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const n = (h.match(/^variant-(\d+)$/) || [])[1];
+  const v = n ? VARIANTEN.find(x => x.p === +n) : VARIANTEN.find(x => x.slug === h);
+  return v ? v.p : null;
+}
+window.addEventListener('hashchange', () => { const p = uitHash(); if (p) zetVariant(p); });
+zetVariant(uitHash() || STANDAARD);
+
+/* Staten */
+const STATEN = [
+  { naam: 'Gelukt', s: '--ok', bg: '--ok-bg', hex: '#1B7346', tekst: 'Een stap is afgerond, bijvoorbeeld een aanmelding.', i: 'check' },
+  { naam: 'Let op', s: '--warn', bg: '--warn-bg', hex: '#8A5A00', tekst: 'Er is een termijn of iets dat binnenkort moet gebeuren.', i: 'let' },
+  { naam: 'Fout', s: '--err', bg: '--err-bg', hex: '#B42335', tekst: 'Iets klopt niet. Zeg wat er mis is en hoe je het oplost.', i: 'fout' },
+  { naam: 'Informatie', s: '--info', bg: '--info-bg', hex: '#4F49B5', tekst: 'Uitleg of een tip. Dezelfde kleur als indigo diep.', i: 'info' },
+];
+document.getElementById('staten').innerHTML = STATEN.map(s => `
+  <div class="staat" style="--s:var(${s.s});--sbg:var(${s.bg})">
+    <div class="kop">${ICOON[s.i]}<span>${s.naam}</span></div><p>${s.tekst}</p><code>${s.hex}</code></div>`).join('');
+
+/* Regels */
+const REGELS = [
+  ['Wit en indigo als basis', 'Wit geeft de pagina rust en ruimte. Indigo werkt goed voor koppen, knoppen en de grote banden die een onderdeel openen.'],
+  ['Zand als verbinding', 'Zand komt het mooist uit als lijn: de lijnen van het logo die door de pagina lopen. Eén licht zandvlak per pagina, zoals een citaat, is vaak genoeg.'],
+  ['Roze en teal als steun', 'Roze en teal geven een band een eigen karakter, bijvoorbeeld bij de cijfers of de partners. Witte tekst leest daarop het prettigst als hij groot is.'],
+  ['Kleine tekst iets donkerder', 'Voor lopende en kleine tekst leest indigo diep prettiger. Het lichtere indigo komt het best tot zijn recht in koppen en vlakken.'],
+  ['Het logo linksboven', 'In de koptekst linksboven is het logo het duidelijkst: de compacte vorm, of |NNA> als er weinig ruimte is.'],
+  ['Kleur met een woord erbij', 'Een status is voor iedereen het duidelijkst met een kleur, een icoon en een kort woord. Dat helpt in elke taal en voor mensen die kleuren anders zien.'],
+];
+document.getElementById('regels').innerHTML = REGELS.map(([h, p]) => `<div class="regel"><h3>${h}</h3><p>${p}</p></div>`).join('');
+
+/* Kopiëren en meldingen */
+const toast = document.getElementById('toast');
+let toastTimer;
+function meld(tekst) { toast.textContent = tekst; toast.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { toast.hidden = true; }, 1800); }
+function selecteer(el) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+document.addEventListener('click', e => {
+  const b = e.target.closest('.kopieer[data-hex]');
+  if (b) navigator.clipboard.writeText(b.dataset.hex).then(() => meld(b.dataset.hex + ' gekopieerd'), () => { selecteer(b); meld('Selecteer en kopieer met ⌘C / Ctrl+C'); });
+  if (e.target.closest('[data-voorbeeld]')) meld('Dit is een voorbeeldknop');
+});
+document.getElementById('kopieer-css').addEventListener('click', () => {
+  const pre = document.getElementById('css-code');
+  navigator.clipboard.writeText(pre.textContent).then(() => meld('CSS gekopieerd'), () => { selecteer(pre); meld('Selecteer en kopieer met ⌘C / Ctrl+C'); });
+});
+
+/* ===== Lijnen als verbinding tussen beeld en tekst ===== */
+/* Lijndikte 5–8 px naar schermbreedte; de marge is twee keer de lijndikte, zoals de margecirkel in het logo */
+const SPELLEN = [];
+const lijnDikte = () => Math.min(8, Math.max(5, innerWidth * 0.0045 + 3));
+function lijnspel(vak, regels) {
+  const laag = mk('svg', { class: 'lijnlaag', 'aria-hidden': 'true' });
+  vak.prepend(laag);
+  const teken = () => {
+    const o = vak.getBoundingClientRect();
+    const blok = sel => { const b = vak.querySelector(sel).getBoundingClientRect(); return { l: b.left - o.left, t: b.top - o.top, r: b.right - o.left, b: b.bottom - o.top }; };
+    const d = lijnDikte();
+    laag.replaceChildren(...regels(blok, Math.round(d * 2), d).map(([x1, y1, x2, y2]) => mk('line', { x1, y1, x2, y2, 'stroke-width': d })));
+  };
+  new ResizeObserver(teken).observe(vak);
+  teken();
+  SPELLEN.push({ vak, teken });
+}
+/* Zelfde opbouw als het logo: de lijn boven, de lijn onder en de staande lijn links, buitenom */
+const drieLijnen = (a, b, c, spiegel = false) => (blok, m, d) => {
+  const A = blok(a), B = blok(b), C = blok(c);
+  if (spiegel) return [[A.l - m, A.t, B.l, B.t - m], [B.l, B.b + m, C.l - m, C.b], [A.r - d / 2, A.b + m, A.r - d / 2, C.t - m]];
+  return [[A.r + m, A.t, B.r, B.t - m], [B.r, B.b + m, C.r + m, C.b], [A.l + d / 2, A.b + m, A.l + d / 2, C.t - m]];
+};
+lijnspel(document.getElementById('lijnspel-logo'), drieLijnen('.ls-1', '.ls-2', '.ls-3'));
+lijnspel(document.getElementById('lijnspel-draad'), drieLijnen('.k1', '.k2', '.k3', true));
+
+/* Parallax: de blokken bewegen licht verschillend mee met scrollen, de lijnen blijven verbonden */
+const DIEPTE = { '.ls-1': -0.05, '.ls-2': 0.07, '.ls-3': -0.03, '.k1': -0.05, '.k2': 0.07, '.k3': -0.03 };
+const rustig = matchMedia('(prefers-reduced-motion: reduce)');
+function parallax() {
+  SPELLEN.forEach(({ vak, teken }) => {
+    const o = vak.getBoundingClientRect();
+    if (o.bottom < -300 || o.top > innerHeight + 300) return;
+    const schaal = rustig.matches ? 0 : innerWidth < 760 ? 0.6 : 1;
+    Object.entries(DIEPTE).forEach(([sel, f]) => {
+      const el = vak.querySelector(sel); if (!el) return;
+      const midden = o.top + el.offsetTop + el.offsetHeight / 2;
+      const v = clamp(-24, -(midden - innerHeight / 2) * f, 24) * schaal;
+      el.style.transform = v ? `translate3d(0, ${v.toFixed(1)}px, 0)` : '';
+    });
+    teken();
+  });
+}
+let pBezig = false;
+const pPlan = () => { if (pBezig) return; pBezig = true; requestAnimationFrame(() => { pBezig = false; parallax(); }); };
+window.addEventListener('scroll', pPlan, { passive: true });
+window.addEventListener('resize', pPlan);
+rustig.addEventListener?.('change', pPlan);
+parallax();
+
+/* Menu: op de telefoon uitklapbaar; de link houdt de gekozen variant */
+const menuKnop = document.getElementById('menu-knop');
+function menu(open) { kopbalk.classList.toggle('menu-open', open); menuKnop.setAttribute('aria-expanded', String(open)); }
+menuKnop.addEventListener('click', () => menu(!kopbalk.classList.contains('menu-open')));
+document.getElementById('menu-lijst').addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]'); if (!a) return;
+  const doel = document.querySelector(a.getAttribute('href')); if (!doel) return;
+  e.preventDefault(); menu(false);
+  doel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') menu(false); });
+window.addEventListener('scroll', () => { if (window.scrollY < 40) menu(false); }, { passive: true });
+
+tekenDemo(); tekenVarianten(); tekenOpening();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { tekenDemo(); tekenVarianten(); tekenOpening(); });
+</script>
